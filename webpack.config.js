@@ -3,6 +3,7 @@ const path = require('path');
 const webpack = require('webpack');
 const Htmlplugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const isProd = process.env.NODE_ENV === 'production';
 
@@ -27,11 +28,25 @@ const plugins = [
         name: 'manifest',
         minChunks: Infinity
     }),
+    new CopyWebpackPlugin([
+        {
+            from: 'src/js',
+            to: 'js'
+        },
+        {
+            from: 'src/img',
+            to: 'img'
+        },
+        {
+            from: 'src/css',
+            to: 'css'
+        },
+    ])
 ];
 
 getPages().forEach((page) => {
     plugins.push(new Htmlplugin({
-        template: 'html-withimg-loader?min=false&exclude=img/!' + path.resolve('src', page),
+        template: path.resolve('src', page),
         filename: page,
         inject: 'body',
         minify: {
@@ -88,28 +103,33 @@ module.exports = {
                 }
             },
             {
+                test: /\.(htm|html)$/i,
+                loader: 'html-withimg-loader?min=false&exclude=img/',
+            },
+            {
                 test: /\.(scss|css)$/,
                 use: isProd ? ExtractTextPlugin.extract({
                     use: [
                         {
                             loader: 'css-loader',
                             options: {
-                                minimize: true,
+                                minimize: false,
                                 sourceMap: true,
                             }
                         },
-                        "sass-loader?sourceMap",
+                        'postcss-loader?sourceMap',
+                        'sass-loader?sourceMap',
                     ],
                     fallback: "style-loader"
-                }) : ['style-loader', 'css-loader', 'sass-loader']
+                }) : ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
             },
         ]
     },
     plugins: plugins,
-    devServer: {
-        contentBase: './dist',
-        compress: true,
-        port: 8086,
-        // historyApiFallback: true
-    }
+    // devServer: {
+    //     contentBase: './dist',
+    //     compress: true,
+    //     port: 8086,
+    //     // historyApiFallback: true
+    // }
 };

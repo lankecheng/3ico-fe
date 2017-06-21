@@ -1,3 +1,64 @@
-.home{
-    background-color: #fff;
+.Frame.main.home{
+    .top-swiper-container{
+        position: relative;
+        width: 100%;
+        height: 500px;
+        min-width: 1280px;
+        .swiper-slide{
+            background-repeat: no-repeat;
+            background-position: center;
+            img{
+                height: 100%;
+            }
+            a{
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .info-top{
+        @include clearfix;
+        margin-top: 20px;
+        .left{
+            float: left;
+            width: 670px;
+            height: 350px;
+            overflow: hidden;
+        }
+        .right{
+            float: right;
+            width: 510px;
+            height: 350px;
+            overflow: hidden;
+        }
+    }
+
+    .info-swiper-container{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        .swiper-slide{
+            a,img{
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+            .title{
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 58px;
+                font-size: 24px;
+                line-height: 58px;
+                color: #fff;
+                background-color: rgba(0, 0, 0, .8);
+                text-align: center;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        }
+    }
 }

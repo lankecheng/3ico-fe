@@ -4,6 +4,61 @@
 #include("./layout/head.html")
 </head>
 <body>
-<div class="home">Home</div>
+    #include("./layout/header.html")
+    #include("./layout/menu.html")
+    
+    <div class="Frame main home">
+
+        <div id="js-home-top-swiper" class="top-swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image: url(img/demo/banner.jpg);">
+                    <a href="javascript:;">
+                    </a>
+                </div>
+                <div class="swiper-slide" style="background-image: url(img/demo/banner-1280.jpg);">
+                    <a href="javascript:;">
+                    </a>
+                </div>
+            </div>
+            <div id="js-home-top-swiper-pagination" class="swiper-pagination"></div>
+        </div>
+
+        <div class="Module info-top">
+            <div class="View container">
+                <div class="left">
+                    <div id="js-home-info-swiper" class="info-swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="javascript:;">
+                                    <img src="img/demo/pic1.jpg" alt="">
+                                    <span class="title">title1</span>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="javascript:;">
+                                    <img src="img/demo/pic1.jpg" alt="">
+                                    <span class="title">title2</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="js-home-info-prev" class="swiper-button-prev swiper-button-white"></div>
+                        <div id="js-home-info-next" class="swiper-button-next swiper-button-white"></div>
+                    </div>
+                </div>                
+                <div class="right">
+                    <div class="hd"></div>
+                    <div class="bd"></div>
+                </div>
+            </div>
+        </div>
+        <div class="Module info-bottom"></div>
+
+        <div class="Module dscyy">dscyy</div>
+
+        <div class="Module fuwu">fuwu</div>
+
+        <div class="Module product">product</div>
+    </div>
+    <div class="Frame footer"></div>
 </body>
 </html>
