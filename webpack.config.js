@@ -126,10 +126,10 @@ module.exports = {
         ]
     },
     plugins: plugins,
-    // devServer: {
-    //     contentBase: './dist',
-    //     compress: true,
-    //     port: 8086,
-    //     // historyApiFallback: true
-    // }
+    devServer: {
+        contentBase: './dist',
+        compress: true,
+        port: 8086,
+        // historyApiFallback: true
+    }
 };
