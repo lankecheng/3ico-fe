@@ -204,9 +204,10 @@
             }
         }
         .bd{
+            width: 1205px;
             padding-bottom: 50px;
-            @include clearfix;
             ul{
+                @include clearfix;
                 margin: 0 0 0 -20px;
                 padding: 0;
                 list-style: none;
