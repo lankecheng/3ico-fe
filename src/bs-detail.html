@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+#include("./layout/head.html")
+</head>
+<body>
+    #include("./layout/header.html")
+    #include("./layout/menu.html")
+
+    <div class="Frame main business-service-detail">
+        <div class="View container">
+            <div class="main">
+                <div class="top">
+                    <div class="pic">
+                        <img src="./img/logo-shunfeng.png"/>
+                    </div>
+                    <div class="info">
+                        <div class="title">顺丰快递</div>
+                        <div class="name">张三</div>
+                        <div class="bd">
+                            <div class="box-one">
+                                <span class="price-wrap">￥<span class="price">29.99</span></span>
+                                <div class="share bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到微信" class="bshare-weixin" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到QQ空间" class="bshare-qzone" href="javascript:void(0);"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a><span class="BSHARE_COUNT bshare-share-count" style="float: none;">53.4K</span></div><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=1&amp;lang=zh"></script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+                            </div>
+                            <div class="control">
+                                <button id="js-fuwu-collect" class="btn-collect"></button>
+                                <button id="js-fuwu-add" class="btn-add">加入服务列表</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="hd">
+                        <div class="js-fwd-tab item" data-val="detail"><a href="javascript:;">服务详情</a></div>
+                        <div class="js-fwd-tab item active" data-val="comment"><a href="javascript:;">服务评价</a></div>
+                    </div>
+                    <div class="bd">
+                        <div style="display: none;" id="js-fwd-detail" class="js-fwd-con detail">后台编辑器编辑</div>
+                        <div id="js-fwd-comment" class="js-fwd-con comment">
+                            <div class="comment-box">
+                                <div class="hd">
+                                    <span class="avatar">
+                                        <img src="img/demo/pic3.jpg" alt="">
+                                    </span>
+                                    <span class="user-name">努力吧喵怪</span>
+                                </div>
+                                <form onsubmit="return false">
+                                    <textarea rows="4" placeholder="请输入评论"></textarea>
+                                    <button class="btn-submit" type="submit">发布评论</button>
+                                </form>
+                            </div>
+                            <div class="hot-comment">
+                                <div class="hd">
+                                    <h3>热门评论</h3>
+                                    <select id="js-fwd-comment-sort" class="sort">
+                                        <option>按时间正序</option>
+                                        <option>按时间倒叙</option>
+                                    </select>
+
+                                    <div style="float: right;" class="pagination-wrap small">
+                                        <div class="pagination">
+                                            <ul>
+                                                <li class="disabled"><a href="javascript:;">&lt;</a></li>
+                                                <li class="active"><a href="javascript:;">1</a></li>
+                                                <li class="more"><a href="javascript:;">...</a></li>
+                                                <li><a href="javascript:;">3</a></li>
+                                                <li><a href="javascript:;">4</a></li>
+                                                <li><a href="javascript:;">5</a></li>
+                                                <li class="more"><a href="javascript:;">...</a></li>
+                                                <li><a href="javascript:;">9</a></li>
+                                                <li><a href="javascript:;">&gt;</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="bd">
+                                    <li>
+                                        <div class="avatar">
+                                            <img src="img/demo/pic3.jpg" alt="">
+                                        </div>
+                                        <div class="bd">
+                                            <div class="title">
+                                                <span class="user-name">努力吧喵怪</span>
+                                                <span class="time">2017-12-05</span>
+                                            </div>
+                                            <div class="content">
+                                                小张的服务实在是无敌了！派件快，服务好！值得信赖！
+                                                小张的服务实在是无敌了！派件快，服务好！
+                                                小张的服务实在是无敌了！派件快，服务好！值得信赖！值得信赖！值得信赖！
+                                            </div>
+                                            <div class="control">
+                                                <span class="like active">26</span>
+                                                <span class="unlike">12</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="avatar">
+                                            <img src="img/demo/pic3.jpg" alt="">
+                                        </div>
+                                        <div class="bd">
+                                            <div class="title">
+                                                <span class="user-name">努力吧喵怪</span>
+                                                <span class="time">2017-12-05</span>
+                                            </div>
+                                            <div class="content">
+                                                小张的服务实在是无敌了！派件快，服务好！值得信赖！
+                                                小张的服务实在是无敌了！派件快，服务好！
+                                                小张的服务实在是无敌了！派件快，服务好！值得信赖！值得信赖！值得信赖！
+                                            </div>
+                                            <div class="control">
+                                                <span class="like active">26</span>
+                                                <span class="unlike">12</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="avatar">
+                                            <img src="img/demo/pic3.jpg" alt="">
+                                        </div>
+                                        <div class="bd">
+                                            <div class="title">
+                                                <span class="user-name">努力吧喵怪</span>
+                                                <span class="time">2017-12-05</span>
+                                            </div>
+                                            <div class="content">
+                                                小张的服务实在是无敌了！派件快，服务好！值得信赖！
+                                                小张的服务实在是无敌了！派件快，服务好！
+                                                小张的服务实在是无敌了！派件快，服务好！值得信赖！值得信赖！值得信赖！
+                                            </div>
+                                            <div class="control">
+                                                <span class="like active">26</span>
+                                                <span class="unlike">12</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="info">
+                    <div class="title">服务商信息</div>
+                    <div class="bd">
+                        <div class="item">
+                            <span class="label">服务企业</span>
+                            <span class="text">台商投资区顺丰快递</span>
+                        </div>
+                        <div class="item">
+                            <span class="label">服务类型</span>
+                            <span class="text">快递</span>
+                        </div>
+                        <div class="item">
+                            <span class="label">所在地点</span>
+                            <span class="text">福建省泉州市台商投资区杏秀路东50米</span>
+                        </div>
+                        <div class="item">
+                            <span class="label">实名认证</span>
+                            <span class="text">张三</span>
+                        </div>
+                        <div class="item">
+                            <span class="label">联系方式</span>
+                            <span class="text">11111111111</span>
+                        </div>
+                        <div class="item">
+                            <span class="label"></span>
+                            <span class="text">
+                                <a class="btn-qq" href="javascript:;">
+                                    QQ交谈
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="recommend">
+                    <div class="title">相关商品服务</div>
+                    <ul class="bd">
+                        <li>
+                            <a href="javascript:;">
+                                <img class="pic" src="img/logo-shunfeng.png">
+                                <span class="text">申通快递小吴</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <img class="pic" src="img/logo-shunfeng.png">
+                                <span class="text">申通快递小吴</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <img class="pic" src="img/logo-shunfeng.png">
+                                <span class="text">申通快递小吴</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    #include("./layout/footer.html")
+</body>
+</html>

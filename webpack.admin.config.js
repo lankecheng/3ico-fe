@@ -7,27 +7,20 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const isProd = process.env.NODE_ENV === 'production';
 
-const getPages = function getPages () {
-    const arr = fs.readdirSync('./src');
-    return arr.filter((item) => {
-        return path.basename(item, '.html') !== 'admin' && path.extname(item) === '.html';
-    });
-};
-
 const plugins = [
-    new webpack.optimize.CommonsChunkPlugin({
-        name: 'vendor',
-        minChunks: function (module) {
-            return (
-                /node_modules/.test(module.context) &&
-                !/\.css$/.test(module.request)
-            )
-        }
-    }),
-    new webpack.optimize.CommonsChunkPlugin({
-        name: 'manifest',
-        minChunks: Infinity
-    }),
+    // new webpack.optimize.CommonsChunkPlugin({
+    //     name: 'vendor',
+    //     minChunks: function (module) {
+    //         return (
+    //             /node_modules/.test(module.context) &&
+    //             !/\.css$/.test(module.request)
+    //         )
+    //     }
+    // }),
+    // new webpack.optimize.CommonsChunkPlugin({
+    //     name: 'manifest',
+    //     minChunks: Infinity
+    // }),
     new CopyWebpackPlugin([
         {
             from: 'src/js',
@@ -41,19 +34,16 @@ const plugins = [
             from: 'src/css',
             to: 'css'
         },
-    ])
-];
-
-getPages().forEach((page) => {
-    plugins.push(new Htmlplugin({
-        template: path.resolve('src', page),
-        filename: page,
+    ]),
+    new Htmlplugin({
+        template: path.resolve('src', 'admin.html'),
+        filename: 'admin.html',
         inject: 'body',
         minify: {
             removeComments: true,
         }
-    }));
-});
+    })
+];
 
 if (isProd) {
     plugins.push(
@@ -77,7 +67,7 @@ if (isProd) {
 
 module.exports = {
     entry: {
-        app: './src/index.js'
+        'admin-entry': './src/admin-entry.js'
     },
     output: {
         path: path.join(__dirname, 'dist'),
