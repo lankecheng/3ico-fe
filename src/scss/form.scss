@@ -20,16 +20,18 @@
             .item{
                 position: relative;
                 margin-top: 20px;
-                padding-left: 170px;
-                line-height: 35px;
+                padding-left: 150px;
+                line-height: 50px;
                 color: #737373;
                 .label{
                     position: absolute;
                     top: 0;
                     left: 0;
                     display: block;
-                    width: 150px;
+                    width: 110px;
                     text-align: right;
+                    font-size: 16px;
+                    color: #737373;
                 }
                 .content{
                     > .item{
@@ -39,8 +41,8 @@
                 }
                 input[type=text]{
                     box-sizing: border-box;
-                    width: 330px;
-                    height: 35px;
+                    width: 375px;
+                    height: 50px;
                     padding: 9px;
                     border: 1px solid #dee2e5;
                     border-radius: 3px;
@@ -53,7 +55,7 @@
                     }
                 }
                 select{
-                    height: 35px;
+                    height: 50px;
                     padding: 8px 10px;
                     border: 1px solid #dee2e5;
                     font-size: 14px;
@@ -82,7 +84,8 @@
                     }
                 }
                 button{
-                    height: 35px;
+                    padding: 0 10px;
+                    height: 50px;
                     border-radius: 3px;
                     border: 0;
                     background-color: #0071e3;
@@ -109,9 +112,64 @@
             +.file{
                 margin-left: 60px;
             }
+            &.multiple{
+                .inner{
+                    position: relative;
+                    z-index: 2;
+                }
+                .pics{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    width: 100%;
+                    height: 100%;
+                    overflow-y: auto;
+                    li{
+                        position: relative;
+                        @include clearfix;
+                        padding: 5px 30px 5px 10px;
+                        background-color: #fff;
+                        font-size: 14px;
+                        line-height: 38px;
+                        color: #737373;
+                        border-bottom: 1px solid #ebeef0;
+                        .pic{
+                            float: left;
+                            width: 56px;
+                            height: 36px;
+                            border: 1px solid #ebeef0;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                        .name{
+                            float: left;
+                            margin-left: 10px;
+                        }
+                        .size{
+                            float: right;
+
+                        }
+                        .remove{
+                            position: absolute;
+                            top: 5px;
+                            right: 10px;
+                            width: 20px;
+                            height: 38px;
+                            text-align: center;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
             &.identify{
                 width: 460px;
                 height: 240px;
+                vertical-align: top;
                 &.licence{
                     .inner{
                         background-image: url('../img/bg-licence.png');

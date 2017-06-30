@@ -18,16 +18,29 @@
                     <label class="label">企业类型选择</label>
                     <div class="content">
                         <select id="js-qyrz-select">
+                            <option value="default">默认</option>
                             <option value="ds">电商企业</option>
                             <option value="fws">服务商企业</option>
                             <option value="pxjg">培训机构企业</option>
                             <option value="yqjg">园区机构企业</option>
                         </select>
+
+                        <select style="display: none;" id="js-qyrz-fws-second">
+                            <option value="default">财税代理</option>
+                            <option value="default">财税代理2</option>
+                        </select>
                     </div>
                 </div>
             </div>
         </div>
-        <form id="js-qyrz-con-ds" class="js-qyrz-con" onsubmit="return false">
+        <form id="js-qyrz-con-default" class="js-qyrz-con" onsubmit="return false">
+        <input type="hidden" name="">
+        <div class="footer">
+            <button class="btn-submit" type="submit">提交</button>
+        </div>
+        </form>
+        <form style="display: none;" id="js-qyrz-con-ds" class="js-qyrz-con" onsubmit="return false">
+        <input type="hidden" name="">
         <div class="box">
             <div class="bd">
                 <div class="item">
@@ -208,6 +221,7 @@
         </form>
 
         <form style="display: none;" id="js-qyrz-con-fws" class="js-qyrz-con" onsubmit="return false">
+        <input type="hidden" name="">
         <div class="box">
             <div class="bd">
                 <div class="item">
@@ -387,7 +401,9 @@
         </div>
         </form>
 
-        <form style="display: none;" id="js-qyrz-con-pxjg" class="js-qyrz-con" onsubmit="return false">
+        <!-- <form style="display: none;" id="js-qyrz-con-pxjg" class="js-qyrz-con" onsubmit="return false"> -->
+        <form id="js-qyrz-con-pxjg" class="js-qyrz-con" onsubmit="return false">
+        <input type="hidden" name="">
         <div class="box">
             <div class="bd">
                 <div class="item">
@@ -505,7 +521,7 @@
                         </div>
                         <div class="file reupload identify back">
                             <input class="upload-input" type="file" name="">
-                            <div class="inner" style="background-image: url('img/identify-back.png')">
+                            <div class="inner" style="background-image: url('img/bg-identify-back.png')">
                                 <div class="upload-tip">点击上传或拖拽文件至此区域</div>
                                 <div class="reupload-tip">
                                     <span class="btn-text">重新上传</span>
@@ -519,14 +535,24 @@
                     <label class="label">资质提交</label>
                     <div class="content">
                         <textarea style="width: 458px; height: 240px;" placeholder="关于资质的文字说明"></textarea>
-                        <div style="margin-left: 60px;" class="file identify licence">
-                            <input class="upload-input" type="file" name="">
-                            <div class="inner">
+                        <div style="margin-left: 60px;" class="file identify licence multiple">
+                            <input class="upload-input" type="file" name="" multiple>
+                            <div class="inner js-multiple-file">
                                 <div class="upload-tip">点击上传或拖拽文件至此区域</div>
-                                <div class="reupload-tip">
-                                    <span class="btn-text">重新上传</span>
-                                    <div class="mask"></div>
-                                </div>
+                                <ul class="pics">
+                                    <li>
+                                        <div class="pic"><img src="img/bg-licence.png"></div>
+                                        <div class="name">课程发展中心合作证书.jpg</div>
+                                        <div class="size">100KB</div>
+                                        <div class="js-multiple-file-remove remove">×</div>
+                                    </li>
+                                    <li>
+                                        <div class="pic"><img src="img/bg-licence.png"></div>
+                                        <div class="name">课程发展中心合作证书.jpg</div>
+                                        <div class="size">100KB</div>
+                                        <div class="js-multiple-file-remove remove">×</div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
