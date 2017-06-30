@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+#include("./layout/head.html")
+</head>
+<body>
+    #include("./layout/header.html")
+    #include("./layout/menu.html")
+
+    <div class="Frame main form">
+    <div class="View container">
+        <form onsubmit="return false">
+            <div class="box">
+                <div class="hd">
+                    <h3>用户个人资料完善</h3>
+                </div>
+                <div class="bd">
+                    <div class="item">
+                        <label class="label">真实姓名</label>
+                        <div class="content">
+                            <input type="text" name="" placeholder="" />
+                        </div>
+                    </div>
+                    <div class="item">
+                        <label class="label">快递公司</label>
+                        <div class="content">
+                            <select>
+                                <option>请选择</option>
+                                <option>顺丰快递</option>
+                                <option>申通快递</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <label class="label">联系电话</label>
+                        <div class="content">
+                            <input type="text" name="" placeholder="固定电话或手机号码" />
+                        </div>
+                    </div>
+                    <div class="item">
+                        <label class="label">联系地址</label>
+                        <div class="content">
+                            <div class="js-area" style="margin-bottom: 20px;">
+                                <select name="province"></select>
+                                <select name="city"></select>
+                                <select name="area"></select>
+                            </div>
+                            <input type="text" name="" placeholder="详细地址" style="width: 500px;" />
+                        </div>
+                    </div>
+                    <div class="item">
+                        <label class="label">联系QQ</label>
+                        <div class="content">
+                            <input type="text" name="" placeholder="" />
+                        </div>
+                    </div>
+                    <div class="item">
+                        <label class="label">收件范围</label>
+                        <div class="content">
+                            <textarea></textarea>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <label class="label">备注</label>
+                        <div class="content">
+                            <textarea></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="hd">
+                    <h3>企业账户</h3>
+                </div>
+                <div class="bd">
+                    <div class="item">
+                        <label class="label">银行账户</label>
+                        <div class="content">
+                            <input type="text" name="" placeholder="" />
+                            <div class="item">
+                                <label class="label">保证金</label>
+                                <div class="content">
+                                    <input style="width: 100px;" type="text" name="固定电话或手机号码" placeholder="" />
+                                    <button type="button">缴纳</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <label class="label">支付宝账户</label>
+                        <div class="content">
+                            <input type="text" name="" placeholder="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <button class="btn-submit" type="submit">提交</button>
+            </div>
+        </form>
+    </div>
+    </div>
+
+    #include("./layout/footer.html")
+</body>
+</html>

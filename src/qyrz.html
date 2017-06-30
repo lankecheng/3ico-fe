@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+#include("./layout/head.html")
+</head>
+<body>
+    #include("./layout/header.html")
+    #include("./layout/menu.html")
+
+    <div class="Frame main form">
+    <div class="View container">
+        <div style="margin-bottom: -40px;" class="box">
+            <div class="hd">
+                <h3>企业认证</h3>
+            </div>
+            <div class="bd">
+                <div class="item">
+                    <label class="label">企业类型选择</label>
+                    <div class="content">
+                        <select id="js-qyrz-select">
+                            <option value="ds">电商企业</option>
+                            <option value="fws">服务商企业</option>
+                            <option value="pxjg">培训机构企业</option>
+                            <option value="yqjg">园区机构企业</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form id="js-qyrz-con-ds" class="js-qyrz-con" onsubmit="return false">
+        <div class="box">
+            <div class="bd">
+                <div class="item">
+                    <label class="label">企业名称</label>
+                    <div class="content">
+                        <input type="text" name="" placeholder="" />
+                        <div class="item">
+                            <label class="label">法人姓名</label>
+                            <div class="content">
+                                <input type="text" name="" placeholder="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">联系人姓名</label>
+                    <div class="content">
+                        <input type="text" name="" placeholder="" />
+                        <div class="item">
+                            <label class="label">联系电话</label>
+                            <div class="content">
+                                <input type="text" name="" placeholder="固定电话或手机号码" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">营业执照号</label>
+                    <div class="content">
+                        <input type="text" name="" placeholder="" />
+                        <div class="item">
+                            <label class="label">联系QQ</label>
+                            <div class="content">
+                                <input type="text" name="" placeholder="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">执照有效期限</label>
+                    <div class="content">
+                        <input class="js-datepicker" type="text" name="" placeholder="开始时间" />&nbsp;至&nbsp;
+                        <input class="js-datepicker" type="text" name="" placeholder="结束时间" />&nbsp;
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">注册资金</label>
+                    <div class="content">
+                        <input type="text" name="" placeholder="" />&nbsp;万元人民币
+                        <div class="item">
+                            <label class="label">公司规模</label>
+                            <div class="content">
+                                <select>
+                                    <option>请选择</option>
+                                    <option>1-9人</option>
+                                    <option>10-49人</option>
+                                    <option>50-99人</option>
+                                    <option>100-499人</option>
+                                    <option>500-999人</option>
+                                    <option>1000以上</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">注册所在地</label>
+                    <div class="content">
+                        <div class="js-area" style="margin-bottom: 20px;">
+                            <select name="province"></select>
+                            <select name="city"></select>
+                            <select name="area"></select>
+                        </div>
+                        <input type="text" name="" placeholder="详细地址" style="width: 500px;" />
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">企业所在地</label>
+                    <div class="content">
+                        <div class="js-area" style="margin-bottom: 20px;">
+                            <select name="province"></select>
+                            <select name="city"></select>
+                            <select name="area"></select>
+                        </div>
+                        <input type="text" name="" placeholder="详细地址" style="width: 500px;" />
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">营业执照</label>
+                    <div class="content">
+                        <div class="file identify licence">
+                            <input class="upload-input" type="file" name="">
+                            <div class="inner">
+                                <div class="upload-tip">点击上传或拖拽文件至此区域</div>
+                                <div class="reupload-tip">
+                                    <span class="btn-text">重新上传</span>
+                                    <div class="mask"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">法人身份证</label>
+                    <div class="content">
+                        <div class="file identify front">
+                            <input class="upload-input" type="file" name="">
+                            <div class="inner">
+                                <div class="upload-tip">点击上传或拖拽文件至此区域</div>
+                                <div class="reupload-tip">
+                                    <span class="btn-text">重新上传</span>
+                                    <div class="mask"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="file reupload identify back">
+                            <input class="upload-input" type="file" name="">
+                            <div class="inner" style="background-image: url('img/identify-back.png')">
+                                <div class="upload-tip">点击上传或拖拽文件至此区域</div>
+                                <div class="reupload-tip">
+                                    <span class="btn-text">重新上传</span>
+                                    <div class="mask"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">企业简介</label>
+                    <div class="content">
+                        <textarea class="large"></textarea>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">主营业务</label>
+                    <div class="content">
+                        <textarea class="large"></textarea>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">备注</label>
+                    <div class="content">
+                        <textarea class="large"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="hd">
+                <h3>企业账户</h3>
+            </div>
+            <div class="bd">
+                <div class="item">
+                    <label class="label">银行账户</label>
+                    <div class="content">
+                        <input type="text" name="" placeholder="" />
+                        <div class="item">
+                            <label class="label">保证金</label>
+                            <div class="content">
+                                <input style="width: 100px;" type="text" name="固定电话或手机号码" placeholder="" />
+                                <button type="button">缴纳</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">支付宝账户</label>
+                    <div class="content">
+                        <input type="text" name="" placeholder="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <button class="btn-submit" type="submit">提交</button>
+        </div>
+        </form>
+
+        <form style="display: none;" id="js-qyrz-con-fws" class="js-qyrz-con" onsubmit="return false">
+        <div class="box">
+            <div class="bd">
+                <div class="item">
+                    <label class="label">企业名称</label>
+                    <div class="content">
+                        <input type="text" name="" placeholder="" />
+                        <div class="item">
+                            <label class="label">法人姓名</label>
+                            <div class="content">
+                                <input type="text" name="" placeholder="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">联系人姓名</label>
+                    <div class="content">
+                        <input type="text" name="" placeholder="" />
+                        <div class="item">
+                            <label class="label">联系电话</label>
+                            <div class="content">
+                                <input type="text" name="" placeholder="固定电话或手机号码" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">营业执照号</label>
+                    <div class="content">
+                        <input type="text" name="" placeholder="" />
+                        <div class="item">
+                            <label class="label">联系QQ</label>
+                            <div class="content">
+                                <input type="text" name="" placeholder="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">执照有效期限</label>
+                    <div class="content">
+                        <input class="js-datepicker" type="text" name="" placeholder="开始时间" />&nbsp;至&nbsp;
+                        <input class="js-datepicker" type="text" name="" placeholder="结束时间" />&nbsp;
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">注册资金</label>
+                    <div class="content">
+                        <input type="text" name="" placeholder="" />&nbsp;万元人民币
+                        <div class="item">
+                            <label class="label">公司规模</label>
+                            <div class="content">
+                                <select>
+                                    <option>请选择</option>
+                                    <option>1-9人</option>
+                                    <option>10-49人</option>
+                                    <option>50-99人</option>
+                                    <option>100-499人</option>
+                                    <option>500-999人</option>
+                                    <option>1000以上</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">注册所在地</label>
+                    <div class="content">
+                        <div class="js-area" style="margin-bottom: 20px;">
+                            <select name="province"></select>
+                            <select name="city"></select>
+                            <select name="area"></select>
+                        </div>
+                        <input type="text" name="" placeholder="详细地址" style="width: 500px;" />
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">企业所在地</label>
+                    <div class="content">
+                        <div class="js-area" style="margin-bottom: 20px;">
+                            <select name="province"></select>
+                            <select name="city"></select>
+                            <select name="area"></select>
+                        </div>
+                        <input type="text" name="" placeholder="详细地址" style="width: 500px;" />
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">营业执照</label>
+                    <div class="content">
+                        <div class="file identify licence">
+                            <input class="upload-input" type="file" name="">
+                            <div class="inner">
+                                <div class="upload-tip">点击上传或拖拽文件至此区域</div>
+                                <div class="reupload-tip">
+                                    <span class="btn-text">重新上传</span>
+                                    <div class="mask"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">法人身份证</label>
+                    <div class="content">
+                        <div class="file identify front">
+                            <input class="upload-input" type="file" name="">
+                            <div class="inner">
+                                <div class="upload-tip">点击上传或拖拽文件至此区域</div>
+                                <div class="reupload-tip">
+                                    <span class="btn-text">重新上传</span>
+                                    <div class="mask"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="file reupload identify back">
+                            <input class="upload-input" type="file" name="">
+                            <div class="inner" style="background-image: url('img/identify-back.png')">
+                                <div class="upload-tip">点击上传或拖拽文件至此区域</div>
+                                <div class="reupload-tip">
+                                    <span class="btn-text">重新上传</span>
+                                    <div class="mask"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">企业简介</label>
+                    <div class="content">
+                        <textarea class="large"></textarea>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">主营业务</label>
+                    <div class="content">
+                        <textarea class="large"></textarea>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">备注</label>
+                    <div class="content">
+                        <textarea class="large"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="hd">
+                <h3>企业账户</h3>
+            </div>
+            <div class="bd">
+                <div class="item">
+                    <label class="label">银行账户</label>
+                    <div class="content">
+                        <input type="text" name="" placeholder="" />
+                        <div class="item">
+                            <label class="label">保证金</label>
+                            <div class="content">
+                                <input style="width: 100px;" type="text" name="固定电话或手机号码" placeholder="" />
+                                <button type="button">缴纳</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">支付宝账户</label>
+                    <div class="content">
+                        <input type="text" name="" placeholder="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <button class="btn-submit" type="submit">提交</button>
+        </div>
+        </form>
+
+        <form style="display: none;" id="js-qyrz-con-pxjg" class="js-qyrz-con" onsubmit="return false">
+        <div class="box">
+            <div class="bd">
+                <div class="item">
+                    <label class="label">企业名称</label>
+                    <div class="content">
+                        <input type="text" name="" placeholder="" />
+                        <div class="item">
+                            <label class="label">法人姓名</label>
+                            <div class="content">
+                                <input type="text" name="" placeholder="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">联系人姓名</label>
+                    <div class="content">
+                        <input type="text" name="" placeholder="" />
+                        <div class="item">
+                            <label class="label">联系电话</label>
+                            <div class="content">
+                                <input type="text" name="" placeholder="固定电话或手机号码" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">营业执照号</label>
+                    <div class="content">
+                        <input type="text" name="" placeholder="" />
+                        <div class="item">
+                            <label class="label">联系QQ</label>
+                            <div class="content">
+                                <input type="text" name="" placeholder="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">执照有效期限</label>
+                    <div class="content">
+                        <input class="js-datepicker" type="text" name="" placeholder="开始时间" />&nbsp;至&nbsp;
+                        <input class="js-datepicker" type="text" name="" placeholder="结束时间" />&nbsp;
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">注册资金</label>
+                    <div class="content">
+                        <input type="text" name="" placeholder="" />&nbsp;万元人民币
+                        <div class="item">
+                            <label class="label">公司规模</label>
+                            <div class="content">
+                                <select>
+                                    <option>请选择</option>
+                                    <option>1-9人</option>
+                                    <option>10-49人</option>
+                                    <option>50-99人</option>
+                                    <option>100-499人</option>
+                                    <option>500-999人</option>
+                                    <option>1000以上</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">注册所在地</label>
+                    <div class="content">
+                        <div class="js-area" style="margin-bottom: 20px;">
+                            <select name="province"></select>
+                            <select name="city"></select>
+                            <select name="area"></select>
+                        </div>
+                        <input type="text" name="" placeholder="详细地址" style="width: 500px;" />
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">企业所在地</label>
+                    <div class="content">
+                        <div class="js-area" style="margin-bottom: 20px;">
+                            <select name="province"></select>
+                            <select name="city"></select>
+                            <select name="area"></select>
+                        </div>
+                        <input type="text" name="" placeholder="详细地址" style="width: 500px;" />
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">营业执照</label>
+                    <div class="content">
+                        <div class="file identify licence">
+                            <input class="upload-input" type="file" name="">
+                            <div class="inner">
+                                <div class="upload-tip">点击上传或拖拽文件至此区域</div>
+                                <div class="reupload-tip">
+                                    <span class="btn-text">重新上传</span>
+                                    <div class="mask"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">法人身份证</label>
+                    <div class="content">
+                        <div class="file identify front">
+                            <input class="upload-input" type="file" name="">
+                            <div class="inner">
+                                <div class="upload-tip">点击上传或拖拽文件至此区域</div>
+                                <div class="reupload-tip">
+                                    <span class="btn-text">重新上传</span>
+                                    <div class="mask"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="file reupload identify back">
+                            <input class="upload-input" type="file" name="">
+                            <div class="inner" style="background-image: url('img/identify-back.png')">
+                                <div class="upload-tip">点击上传或拖拽文件至此区域</div>
+                                <div class="reupload-tip">
+                                    <span class="btn-text">重新上传</span>
+                                    <div class="mask"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">资质提交</label>
+                    <div class="content">
+                        <textarea style="width: 458px; height: 240px;" placeholder="关于资质的文字说明"></textarea>
+                        <div style="margin-left: 60px;" class="file identify licence">
+                            <input class="upload-input" type="file" name="">
+                            <div class="inner">
+                                <div class="upload-tip">点击上传或拖拽文件至此区域</div>
+                                <div class="reupload-tip">
+                                    <span class="btn-text">重新上传</span>
+                                    <div class="mask"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">企业简介</label>
+                    <div class="content">
+                        <textarea class="large"></textarea>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">培训范围</label>
+                    <div class="content">
+                        <textarea class="large"></textarea>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">备注</label>
+                    <div class="content">
+                        <textarea class="large"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="hd">
+                <h3>企业账户</h3>
+            </div>
+            <div class="bd">
+                <div class="item">
+                    <label class="label">银行账户</label>
+                    <div class="content">
+                        <input type="text" name="" placeholder="" />
+                        <div class="item">
+                            <label class="label">保证金</label>
+                            <div class="content">
+                                <input style="width: 100px;" type="text" name="固定电话或手机号码" placeholder="" />
+                                <button type="button">缴纳</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">支付宝账户</label>
+                    <div class="content">
+                        <input type="text" name="" placeholder="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <button class="btn-submit" type="submit">提交</button>
+        </div>
+        </form>
+
+        <form style="display: none;" id="js-qyrz-con-yqjg" class="js-qyrz-con" onsubmit="return false">
+        <div class="box">
+            <div class="bd">
+                <div class="item">
+                    <label class="label">园区名称</label>
+                    <div class="content">
+                        <input type="text" name="" placeholder="" />
+                        <div class="item">
+                            <label class="label">运营主体名称</label>
+                            <div class="content">
+                                <input type="text" name="" placeholder="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">法人姓名</label>
+                    <div class="content">
+                        <input type="text" name="" placeholder="" />
+                        <div class="item">
+                            <label class="label">联系人姓名</label>
+                            <div class="content">
+                                <input type="text" name="" placeholder="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">联系电话</label>
+                    <div class="content">
+                        <input type="text" name="" placeholder="" />
+                        <div class="item">
+                            <label class="label">联系QQ</label>
+                            <div class="content">
+                                <input type="text" name="" placeholder="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">营业执照号</label>
+                    <div class="content">
+                        <input type="text" name="" placeholder="" />
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">执照有效期限</label>
+                    <div class="content">
+                        <input class="js-datepicker" type="text" name="" placeholder="开始时间" />&nbsp;至&nbsp;
+                        <input class="js-datepicker" type="text" name="" placeholder="结束时间" />&nbsp;
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">注册资金</label>
+                    <div class="content">
+                        <input type="text" name="" placeholder="" />&nbsp;万元人民币
+                        <div class="item">
+                            <label class="label">公司规模</label>
+                            <div class="content">
+                                <select>
+                                    <option>请选择</option>
+                                    <option>1-9人</option>
+                                    <option>10-49人</option>
+                                    <option>50-99人</option>
+                                    <option>100-499人</option>
+                                    <option>500-999人</option>
+                                    <option>1000以上</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">注册所在地</label>
+                    <div class="content">
+                        <div class="js-area" style="margin-bottom: 20px;">
+                            <select name="province"></select>
+                            <select name="city"></select>
+                            <select name="area"></select>
+                        </div>
+                        <input type="text" name="" placeholder="详细地址" style="width: 500px;" />
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">企业所在地</label>
+                    <div class="content">
+                        <div class="js-area" style="margin-bottom: 20px;">
+                            <select name="province"></select>
+                            <select name="city"></select>
+                            <select name="area"></select>
+                        </div>
+                        <input type="text" name="" placeholder="详细地址" style="width: 500px;" />
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">营业执照</label>
+                    <div class="content">
+                        <div class="file identify licence">
+                            <input class="upload-input" type="file" name="">
+                            <div class="inner">
+                                <div class="upload-tip">点击上传或拖拽文件至此区域</div>
+                                <div class="reupload-tip">
+                                    <span class="btn-text">重新上传</span>
+                                    <div class="mask"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">法人身份证</label>
+                    <div class="content">
+                        <div class="file identify front">
+                            <input class="upload-input" type="file" name="">
+                            <div class="inner">
+                                <div class="upload-tip">点击上传或拖拽文件至此区域</div>
+                                <div class="reupload-tip">
+                                    <span class="btn-text">重新上传</span>
+                                    <div class="mask"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="file reupload identify back">
+                            <input class="upload-input" type="file" name="">
+                            <div class="inner" style="background-image: url('img/identify-back.png')">
+                                <div class="upload-tip">点击上传或拖拽文件至此区域</div>
+                                <div class="reupload-tip">
+                                    <span class="btn-text">重新上传</span>
+                                    <div class="mask"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">园区简介</label>
+                    <div class="content">
+                        <textarea class="large"></textarea>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">园区服务内容</label>
+                    <div class="content">
+                        <textarea class="large"></textarea>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">园区荣耀</label>
+                    <div class="content">
+                        <textarea class="large"></textarea>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">备注</label>
+                    <div class="content">
+                        <textarea class="large"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="hd">
+                <h3>企业账户</h3>
+            </div>
+            <div class="bd">
+                <div class="item">
+                    <label class="label">银行账户</label>
+                    <div class="content">
+                        <input type="text" name="" placeholder="" />
+                        <div class="item">
+                            <label class="label">保证金</label>
+                            <div class="content">
+                                <input style="width: 100px;" type="text" name="固定电话或手机号码" placeholder="" />
+                                <button type="button">缴纳</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">支付宝账户</label>
+                    <div class="content">
+                        <input type="text" name="" placeholder="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <button class="btn-submit" type="submit">提交</button>
+        </div>
+        </form>
+
+    </div>
+    </div>
+
+    #include("./layout/footer.html")
+</body>
+</html>
