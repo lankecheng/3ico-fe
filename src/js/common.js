@@ -118,7 +118,7 @@
     '<div class="item">'+
     '<div class="label">验证码</div>'+
     '<div class="content">'+
-    '<input type="text" style="width: 100px;"/>'+
+    '<input type="text" style="width: 150px;"/>'+
     '<img src="img/demo/code.png" alt="" class="code-pic"/>'+
     '<div id="js-login-code-refresh" class="btn-refresh"></div>'+
     '</div>'+
