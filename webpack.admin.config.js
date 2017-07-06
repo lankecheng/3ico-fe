@@ -42,7 +42,31 @@ const plugins = [
         minify: {
             removeComments: true,
         }
-    })
+    }),
+    new Htmlplugin({
+        template: path.resolve('src', 'admin-gr.html'),
+        filename: 'admin-gr.html',
+        inject: 'body',
+        minify: {
+            removeComments: true,
+        }
+    }),
+    new Htmlplugin({
+        template: path.resolve('src', 'admin-qy.html'),
+        filename: 'admin-qy.html',
+        inject: 'body',
+        minify: {
+            removeComments: true,
+        }
+    }),
+    new Htmlplugin({
+        template: path.resolve('src', 'admin-login.html'),
+        filename: 'admin-login.html',
+        inject: 'body',
+        minify: {
+            removeComments: true,
+        }
+    }),
 ];
 
 if (isProd) {

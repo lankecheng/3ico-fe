@@ -10,7 +10,11 @@ const isProd = process.env.NODE_ENV === 'production';
 const getPages = function getPages () {
     const arr = fs.readdirSync('./src');
     return arr.filter((item) => {
-        return path.basename(item, '.html') !== 'admin' && path.extname(item) === '.html';
+        return path.basename(item, '.html') !== 'admin' &&
+        path.basename(item, '.html') !== 'admin-login' &&
+        path.basename(item, '.html') !== 'admin-gr' &&
+        path.basename(item, '.html') !== 'admin-qy' &&
+        path.extname(item) === '.html';
     });
 };
 

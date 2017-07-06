@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+#include("./layout/head.html")
+</head>
+<body>
+    #include("./layout/header.html")
+    #include("./layout/menu.html")
+
+    <div class="Frame main qyzp-list">
+        <div class="View container">
+            <div class="hd"><h3>企业招聘</h3></div>
+            <div class="filter">
+                <form onsubmit="return false">
+                <div class="item">
+                    <span class="label">工作地区</span>
+                    <div class="content">
+                        <select>
+                            <option>及城区</option>
+                        </select>
+
+                        <div class="item">
+                            <span class="label">招聘岗位</span>
+                            <div class="content">
+                                <select>
+                                    <option>不限</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <span class="label">月薪范围</span>
+                            <div class="content">
+                                <select>
+                                    <option>20-25</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <span class="label">福利待遇</span>
+                    <div class="content">
+                        <label>
+                            <input type="checkbox" name="">
+                            仓储服务
+                        </label>
+                        <label>
+                            <input type="checkbox" name="">
+                            代发货
+                        </label>
+                        <label>
+                            <input type="checkbox" name="">
+                            代发货
+                        </label>
+                        <label>
+                            <input type="checkbox" name="">
+                            代发货
+                        </label>
+                        <label>
+                            <input type="checkbox" name="">
+                            代发货
+                        </label>
+                        <label>
+                            <input type="checkbox" name="">
+                            代发货
+                        </label>
+                        <label>
+                            <input type="checkbox" name="">
+                            代发货
+                        </label>
+                        <label>
+                            <input type="checkbox" name="">
+                            代发货
+                        </label>
+                        <label>
+                            <input type="checkbox" name="">
+                            代发货
+                        </label>
+                        <label>
+                            <input type="checkbox" name="">
+                            代发货
+                        </label>
+                        <label>
+                            <input type="checkbox" name="">
+                            代发货
+                        </label>
+                        <label>
+                            <input type="checkbox" name="">
+                            代发货
+                        </label>
+                        <label>
+                            <input type="checkbox" name="">
+                            代发货
+                        </label>
+                    </div>
+                </div>
+                <div class="item ft">
+                    <span class="label"></span>
+                    <div class="content">
+                        <button class="btn" type="submit">按条件筛选</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+
+            <div class="box">
+                <div class="hd">
+                    <h3>为你推荐以下最新岗位</h3>
+                </div>
+                <div class="bd">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>招聘岗位</th>
+                                <th>需求人数</th>
+                                <th>招聘企业</th>
+                                <th>工作地点</th>
+                                <th>薪资水平</th>
+                                <th class="control">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>美工</td>
+                                <td>本科</td>
+                                <td>3年美工专业</td>
+                                <td>罗阳镇</td>
+                                <td>男</td>
+                                <td>
+                                    <a class="btn" href="javascript:;">查看详情</a>
+                                    <a class="btn" href="javascript:;">投递简历</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>美工</td>
+                                <td>本科</td>
+                                <td>3年美工专业</td>
+                                <td>罗阳镇</td>
+                                <td>男</td>
+                                <td>
+                                    <a class="btn" href="javascript:;">查看详情</a>
+                                    <a class="btn" href="javascript:;">投递简历</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>美工</td>
+                                <td>本科</td>
+                                <td>3年美工专业</td>
+                                <td>罗阳镇</td>
+                                <td>男</td>
+                                <td>
+                                    <a class="btn" href="javascript:;">查看详情</a>
+                                    <a class="btn" href="javascript:;">投递简历</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="ft">
+                    #include("./layout/pagination.html")
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="empty">抱歉！暂无符合您要求的岗位，试试减少一些条件吧~</div>
+            </div>
+        </div>
+    </div>
+
+    #include("./layout/footer.html")
+</body>
+</html>

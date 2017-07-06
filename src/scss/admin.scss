@@ -2,6 +2,8 @@
 @import './common.scss';
 
 .header{
+    position: relative;
+    z-index: 1;
     @include clearfix;
     height: 40px;
     background-color: #f5f5f5;
@@ -51,10 +53,11 @@
     .sidebar{
         float: left;
         width: 210px;
+        background-color: #fff;
         .inner{
             border: 1px solid #dee2e5;
             .top{
-                padding: 30px;
+                padding: 30px 20px;
                 .avatar{
                     margin: 0 auto;
                     width: 100px;
@@ -68,9 +71,14 @@
                 }
                 .user-name{
                     margin-top: 20px;
+                    height: 16px;
                     font-size: 16px;
+                    line-height: 1;
                     color: #676767;
                     text-align: center;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
                 .uid{
                     margin-top: 10px;
@@ -254,6 +262,7 @@
             }
             .item{
                 @include clearfix;
+                margin-top: -1px;
                 margin-bottom: -1px;
                 padding: 35px;
                 border-top: 1px solid #dee2e5;
@@ -273,6 +282,9 @@
                     text-align: right;
                     font-size: 20px;
                     color: #676767;
+                    &.warning{
+                        color: #ff7979;
+                    }
                 }
                 .content{
                     width: 460px;
@@ -318,6 +330,8 @@
 }
 
 .footer{
+    position: relative;
+    z-index: 1;
     background-color: #cacaca;
     box-shadow: 0 -1px 1px 1px rgba(0, 0, 0, .25);
     .container{
@@ -344,5 +358,111 @@
             line-height: 1.4;
             color: #fff;
         }
+    }
+}
+
+
+.admin-login{
+    background-color: #f8f7f5;
+    >.main{
+        width: 100%;
+        background: url('../img/admin-login-bg.jpg') repeat center;
+    }
+    .login-box{
+        @include clearfix;
+        width: 770px;
+        height: 385px;
+        margin: 150px auto 0;
+        background-color: #fff;
+        border-radius: 3px;
+        box-shadow: -9px 9px 24px 8px rgba(165, 165, 165, .1);
+        overflow: hidden;
+        .left{
+            float: left;
+            width: 310px;
+            height: 100%;
+            background-color: #3886e4;
+            .logo{
+                width: 212px;
+                height: 212px;
+                margin: 40px auto 0;
+            }
+            .text{
+                margin-top: 30px;
+                text-align: center;
+                line-height: 1.4;
+                color: #fff;
+                .main{
+                    font-size: 22px;
+                }
+                .sub{
+                    font-size: 16px;
+                }
+            }
+        }
+        .right{
+            float: right;
+            width: 460px;
+            .hd{
+                padding: 25px 50px 0;
+                font-size: 20px;
+                color: #0f70e5;
+            }
+            .sub{
+                padding: 20px 50px 0;
+                font-size: 14px;
+                color: #a5a5a5;
+            }
+            .bd{
+                padding: 40px 50px 0;
+                .item{
+                    font-size: 14px;
+                    color: #a5a5a5;
+                    &+.item{
+                        margin-top: 20px;
+                    }
+                }
+                input[type=text], input[type=password]{
+                    box-sizing: border-box;
+                    width: 100%;
+                    height: 50px;
+                    padding: 9px;
+                    border: 1px solid #dee2e5;
+                    border-radius: 3px;
+                    outline: none;
+                    font-size: 14px;
+                    line-height: 1;
+                    background-color: #fff;
+                    &::-webkit-input-placeholder{
+                        font-size: 14px;
+                        color: #a5a5a5;
+                    }
+                }
+            }
+            .ft{
+                margin-top: 20px;
+                padding-top: 20px;
+                border-top: 1px solid #ebeef0;
+                text-align: center;
+                .btn-submit{
+                    width: 190px;
+                    height: 48px;
+                    border-radius: 3px;
+                    border: 0;
+                    background-color: #0071e3;
+                    color: #fff;
+                    outline: none;
+                    text-align: center;
+                    cursor: pointer;
+                    &:hover{
+                        opacity: .9;
+                    }
+                }
+            }
+        }
+    }
+    .footer{
+        background-color: #0f70e5;
+        box-shadow: 0 10px 32px 7px rgba(0, 0, 0, .35);
     }
 }

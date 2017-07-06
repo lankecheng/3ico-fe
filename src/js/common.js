@@ -133,7 +133,7 @@
     '</div>';
 
 
-    $('#js-login').on('click', function () {
+    $('#js-login,.js-login').on('click', function () {
         loginDialog.showModal();
     });
     $('#js-register').on('click', function () {

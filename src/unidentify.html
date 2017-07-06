@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+#include("./layout/head.html")
+</head>
+<body>
+    #include("./layout/header.html")
+    #include("./layout/menu.html")
+
+    <div class="Frame main msg">
+    <div class="View container">
+        <div class="pic">
+            <img src="img/unidentify.png"/>
+        </div>
+        <div class="tip">对不起，您尚未进行实名认证！<br/>点击以下按钮进行实名认证。</div>
+
+        <div class="control">
+            <a class="js-login btn" href="javascript:;">立即认证</a><br/><br/>
+            <a href="javascript:history.go(-1);">返回上一页</a>
+        </div>
+    </div>
+    </div>
+
+    #include("./layout/footer.html")
+</body>
+</html>
