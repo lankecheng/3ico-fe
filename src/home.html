@@ -1,613 +1,500 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:wb="http://open.weibo.com/wb">
 <head>
-#include("./layout/head.html")
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3ICO</title>
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/swiper-3.4.2.jquery.min.js"></script>
+    <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
 </head>
-<body>
-    #include("./layout/header.html")
-    #include("./layout/menu.html")
-
-    <div class="Frame main home">
-
-        <div id="js-home-top-swiper" class="top-swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide" style="background-image: url(img/demo/banner.jpg);">
-                    <a href="javascript:;">
+<body class="home">
+    <div class="Frame top">
+        <div class="View container">
+            <span>www.3ico.com</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span>
+                <i class="ico-phone"></i>
+                +13615966354
+            </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span>
+            ICO is Initial Crypto-Token Offering 比特币：<span class="green">15836.9178</span>元
+            以太坊：<span class="green">1357.66761</span> 元
+            </span>
+            <ul class="menus">
+                <li>
+                    <a class="login" href="javascript:;">
+                        <i class="ico-user"></i>
+                        登录
                     </a>
-                </div>
-                <div class="swiper-slide" style="background-image: url(img/demo/banner-1280.jpg);">
-                    <a href="javascript:;">
-                    </a>
-                </div>
-            </div>
-            <div id="js-home-top-swiper-pagination" class="swiper-pagination"></div>
+                </li>
+                <li>
+                    <a class="register" href="javascript:;">注册</a>
+                </li>
+            </ul>
         </div>
-
-        <div class="Module info-top">
-            <div class="View container">
-                <div class="left">
-                    <div id="js-home-info-swiper" class="info-swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <a href="javascript:;">
-                                    <img src="img/demo/pic1.jpg" alt="">
-                                    <span class="title">title1</span>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="javascript:;">
-                                    <img src="img/demo/pic1.jpg" alt="">
-                                    <span class="title">title2</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div id="js-home-info-prev" class="swiper-button-prev swiper-button-white"></div>
-                        <div id="js-home-info-next" class="swiper-button-next swiper-button-white"></div>
-                    </div>
-                </div>
-                <div class="right">
-                    <div class="hd">
-                        <div class="js-hitr-title item active" data-val="dsxy">
-                            <a href="javascript:;">电商学院</a></div>
-                        <div class="js-hitr-title item" data-val="dspx">
-                            <a href="javascript:;">电商培训</a></div>
-                        <div class="js-hitr-title item" data-val="jyfx">
-                            <a href="javascript:;">经验分享</a></div>
-                        <div class="js-hitr-title item" data-val="cygs">
-                            <a href="javascript:;">创业故事</a></div>
-                    </div>
-                    <div class="bd">
-                        <div style="display: block;" class="js-hitr-con" id="js-hitr-dsxy">
-                            <ul class="list">
-                                <li>
-                                    <a href="javascript:;">1</a>
-                                    <span class="time">02-25</span>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">title</a>
-                                    <span class="time">02-25</span>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">title</a>
-                                    <span class="time">02-25</span>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">title</a>
-                                    <span class="time">02-25</span>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">title</a>
-                                    <span class="time">02-25</span>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">title</a>
-                                    <span class="time">02-25</span>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">title</a>
-                                    <span class="time">02-25</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div style="display: none;" class="js-hitr-con" id="js-hitr-dspx">
-                            <ul class="list">
-                                <li>
-                                    <a href="javascript:;">2</a>
-                                    <span class="time">02-25</span>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">title</a>
-                                    <span class="time">02-25</span>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">title</a>
-                                    <span class="time">02-25</span>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">title</a>
-                                    <span class="time">02-25</span>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">title</a>
-                                    <span class="time">02-25</span>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">title</a>
-                                    <span class="time">02-25</span>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">title</a>
-                                    <span class="time">02-25</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div style="display: none;" class="js-hitr-con" id="js-hitr-jyfx">
-                            <ul class="list">
-                                <li>
-                                    <a href="javascript:;">3</a>
-                                    <span class="time">02-25</span>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">title</a>
-                                    <span class="time">02-25</span>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">title</a>
-                                    <span class="time">02-25</span>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">title</a>
-                                    <span class="time">02-25</span>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">title</a>
-                                    <span class="time">02-25</span>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">title</a>
-                                    <span class="time">02-25</span>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">title</a>
-                                    <span class="time">02-25</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div style="display: none;" class="js-hitr-con" id="js-hitr-cygs">
-                            <ul class="list">
-                                <li>
-                                    <a href="javascript:;">4</a>
-                                    <span class="time">02-25</span>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">title</a>
-                                    <span class="time">02-25</span>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">title</a>
-                                    <span class="time">02-25</span>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">title</a>
-                                    <span class="time">02-25</span>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">title</a>
-                                    <span class="time">02-25</span>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">title</a>
-                                    <span class="time">02-25</span>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">title</a>
-                                    <span class="time">02-25</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+    </div>
+    <div class="header">
+        <div class="View container">
+            <h1 class="logo"><img src="img/logo.png"></h1>
+            <ul class="menus">
+                <li>
+                    <a  class="active" href="javascript:;">首页</a>
+                </li>
+                <li>
+                    <a href="javascript:;">项目信息</a>
+                </li>
+                <li>
+                    <a href="javascript:;">push集市</a>
+                </li>
+                <li>
+                    <a href="javascript:;">关于我们</a>
+                </li>
+                <li>
+                    <a href="javascript:;">联系我们</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="js-home-banner" class="banner-swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: url(img/demo/banner.jpg);">
+                <a href="javascript:;">
+                </a>
+            </div>
+            <div class="swiper-slide" style="background-image: url(img/demo/banner.jpg);">
+                <a href="javascript:;">
+                </a>
             </div>
         </div>
-        <div class="Module info-bottom">
-            <div class="View container">
-                <div class="left">
-                    <div class="box">
-                        <div class="hd">
-                            <h3>企业招聘</h3>
-                            <a class="more" href="javascript:;">查看更多</a>
-                        </div>
-
-                            <ul class="bd">
-                                <li>
-                                    <a href="javascript:;">title</a>
-                                    <span class="time">02-25</span>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">title</a>
-                                    <span class="time">02-25</span>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">title</a>
-                                    <span class="time">02-25</span>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">title</a>
-                                    <span class="time">02-25</span>
-                                </li>
-                            </ul>
-
-                    </div>
-                    <div class="box">
-                        <div class="hd">
-                            <h3>通知公告</h3>
-                            <a class="more" href="javascript:;">查看更多</a>
-                        </div>
-
-                            <ul class="bd">
-                                <li>
-                                    <a href="javascript:;">title</a>
-                                    <span class="time">02-25</span>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">title</a>
-                                    <span class="time">02-25</span>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">title</a>
-                                    <span class="time">02-25</span>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">title</a>
-                                    <span class="time">02-25</span>
-                                </li>
-                            </ul>
-
-                    </div>
+        <div id="js-home-banner-pagination" class="swiper-pagination"></div>
+    </div>
+    <div class="notice">
+        <div class="View container">
+            <span class="title">公告&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</span>
+            <div id="js-home-notice" class="notice-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">关于网站即将全面系统升级，提前关闭ICO项目的通知1</div>
+                    <div class="swiper-slide">关于网站即将全面系统升级，提前关闭ICO项目的通知2</div>
                 </div>
-                <div class="middle">
-                    <div class="box">
-                        <div class="hd">
-                            <h3>行业动态</h3>
-                            <a class="more" href="javascript:;">查看更多</a>
-                        </div>
-                        <div class="top">
-                            <a href="javascript:;">
-                                <img src="img/demo/pic2.jpg" alt="">
-                                <span class="title">转型人工智能，到底是噱头还是大势所趋？</span>
-                            </a>
-                        </div>
-                        <ul class="bd">
-                            <li>
-                                <a href="javascript:;">title</a>
-                                <span class="time">02-25</span>
-                            </li>
-                            <li>
-                                <a href="javascript:;">title</a>
-                                <span class="time">02-25</span>
-                            </li>
-                            <li>
-                                <a href="javascript:;">title</a>
-                                <span class="time">02-25</span>
-                            </li>
-                            <li>
-                                <a href="javascript:;">title</a>
-                                <span class="time">02-25</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="right">
-                    <div class="box">
-                        <div class="hd">
-                            <h3>政策导读</h3>
-                            <a class="more" href="javascript:;">查看更多</a>
-                        </div>
-                        <div class="top">
-                            <a href="javascript:;">
-                                <img src="img/demo/pic2.jpg" alt="">
-                                <span class="title">转型人工智能，到底是噱头还是大势所趋？</span>
-                            </a>
-                        </div>
-                        <ul class="bd">
-                            <li>
-                                <a href="javascript:;">title</a>
-                                <span class="time">02-25</span>
-                            </li>
-                            <li>
-                                <a href="javascript:;">title</a>
-                                <span class="time">02-25</span>
-                            </li>
-                            <li>
-                                <a href="javascript:;">title</a>
-                                <span class="time">02-25</span>
-                            </li>
-                            <li>
-                                <a href="javascript:;">title</a>
-                                <span class="time">02-25</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                <div id="js-home-notice-prev" class="swiper-button-prev"></div>
+                <div id="js-home-notice-next" class="swiper-button-next"></div>
             </div>
         </div>
-
-        <div class="Module dscyy">
-            <div class="View container">
+    </div>
+    <div class="Module info">
+        <div class="View container">
+            <div class="left">
                 <div class="hd">
-                    <h3>电商产业园</h3>
-                    <a class="more" href="javascript:;">查看更多</a>
+                    <div class="title">ICO日历</div>
+                    <a class="more" href="javascript:;">更多</a>
+                </div>
+                <ul class="bd">
+                    <li>
+                        <span class="time">07月08日</span>
+                        <a href="javascript:;">
+                            <span class="tag">沃尔顿链&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                            <span class="content">全球去中心化的价值物联网商业生态链[平台]</span>
+                        </a>
+                    </li>
+                    <li>
+                        <span class="time">07月08日</span>
+                        <a href="javascript:;">
+                            <span class="tag">沃尔顿链&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                            <span class="content">全球去中心化的价值物联网商业生态链[平台]</span>
+                        </a>
+                    </li>
+                    <li>
+                        <span class="time">07月08日</span>
+                        <a href="javascript:;">
+                            <span class="tag">沃尔顿链&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                            <span class="content">全球去中心化的价值物联网商业生态链[平台]</span>
+                        </a>
+                    </li>
+                    <li>
+                        <span class="time">07月08日</span>
+                        <a href="javascript:;">
+                            <span class="tag">沃尔顿链&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                            <span class="content">全球去中心化的价值物联网商业生态链[平台]</span>
+                        </a>
+                    </li>
+                    <li>
+                        <span class="time">07月08日</span>
+                        <a href="javascript:;">
+                            <span class="tag">沃尔顿链&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                            <span class="content">全球去中心化的价值物联网商业生态链[平台]</span>
+                        </a>
+                    </li>
+                    <li>
+                        <span class="time">07月08日</span>
+                        <a href="javascript:;">
+                            <span class="tag">沃尔顿链&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                            <span class="content">全球去中心化的价值物联网商业生态链[平台]</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="right">
+                <div class="hd">
+                    <div class="title">新闻资讯</div>
+                    <a class="more" href="javascript:;">更多</a>
                 </div>
                 <div class="bd">
-                    <div id="js-dscyy-detail-swiper" class="dscyy-swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="item swiper-slide">
-                                <a href="javascript:;">
-                                    <img src="img/demo/pic3.jpg" alt=""/>
-                                    <span class="title">青创城 国际网批中心</span>
-                                </a>
+                    <div class="top">
+                        <a href="javascript:;">
+                            <div class="pic"><img src="img/logo.png"></div>
+                            <div class="content">
+                                <div class="title">区块链上的股市：特拉华州的潜在影响</div>
+                                <div class="desc">上周美国特拉华州通过的州法律修正案一旦在本月底写进法律，将让本周注册成立的公司有权在区块链平台上发行和交易股票...</div>
                             </div>
-                            <div class="item swiper-slide">
-                                <a href="javascript:;">
-                                    <img src="img/demo/pic3.jpg" alt=""/>
-                                    <span class="title">青创城 国际网批中心</span>
-                                </a>
-                            </div>
-                            <div class="item swiper-slide">
-                                <a href="javascript:;">
-                                    <img src="img/demo/pic3.jpg" alt=""/>
-                                    <span class="title">青创城 国际网批中心</span>
-                                </a>
-                            </div>
-                            <div class="item swiper-slide">
-                                <a href="javascript:;">
-                                    <img src="img/demo/pic3.jpg" alt=""/>
-                                    <span class="title">青创城 国际网批中心</span>
-                                </a>
-                            </div>
-                            <div class="item swiper-slide">
-                                <a href="javascript:;">
-                                    <img src="img/demo/pic3.jpg" alt=""/>
-                                    <span class="title">青创城 国际网批中心</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div id="js-home-dscyy-prev" class="swiper-button-prev"></div>
-                        <div id="js-home-dscyy-next" class="swiper-button-next"></div>
+                        </a>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="Module fuwu">
-            <div class="View container">
-                <div class="hd">
-                    <h3>电商服务市场</h3>
-                    <a class="more" href="javascript:;">查看更多</a>
-                </div>
-                <div class="bd">
-                    <div class="tab">
-                        <div class="js-hfw-tab item active" data-val="kd">
-                            <div class="inner">
-                                <div class="icon-fuwu kd"></div>
-                                <span class="text">快递</span>
-                            </div>
-                        </div>
-                        <div class="js-hfw-tab item" data-val="df">
-                            <div class="inner">
-                                <div class="icon-fuwu df"></div>
-                                <span class="text">代发</span>
-                            </div>
-                        </div>
-                        <div class="js-hfw-tab item" data-val="sw">
-                            <div class="inner">
-                                <div class="icon-fuwu sw"></div>
-                                <span class="text">税务</span>
-                            </div>
-                        </div>
-                        <div class="js-hfw-tab item" data-val="qt">
-                            <div class="inner">
-                                <div class="icon-fuwu qt"></div>
-                                <span class="text">其他</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content">
-                        <div style="display: block;" class="js-hfw-con fuwu-swiper-wrap" id="js-hfw-kd">
-                            <div id="js-home-fuwu-swiper-kd" class="fuwu-swiper-container">
-                                <div class="swiper-wrapper">
-                                    <div class="item swiper-slide">
-                                        <a href="javascript:;">
-                                            <img src="img/logo-shunfeng.png" alt=""/>
-                                        </a>
-                                    </div>
-                                    <div class="item swiper-slide">
-                                        <a href="javascript:;">
-                                            <img src="img/logo-shunfeng.png" alt=""/>
-                                        </a>
-                                    </div>
-                                    <div class="item swiper-slide">
-                                        <a href="javascript:;">
-                                            <img src="img/logo-shunfeng.png" alt=""/>
-                                        </a>
-                                    </div>
-                                    <div class="item swiper-slide">
-                                        <a href="javascript:;">
-                                            <img src="img/logo-shunfeng.png" alt=""/>
-                                        </a>
-                                    </div>
-                                    <div class="item swiper-slide">
-                                        <a href="javascript:;">
-                                            <img src="img/demo/pic3.jpg" alt=""/>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div id="js-home-fuwu-prev-kd" class="swiper-button-prev"></div>
-                                <div id="js-home-fuwu-next-kd" class="swiper-button-next"></div>
-                            </div>
-                        </div>
-                        <div class="js-hfw-con fuwu-swiper-wrap" id="js-hfw-df">
-                            <div id="js-home-fuwu-swiper-df" class="fuwu-swiper-container">
-                                <div class="swiper-wrapper">
-                                    <div class="item swiper-slide">
-                                        <a href="javascript:;">
-                                            <img src="img/logo-shunfeng.png" alt=""/>
-                                        </a>
-                                    </div>
-                                    <div class="item swiper-slide">
-                                        <a href="javascript:;">
-                                            <img src="img/logo-shunfeng.png" alt=""/>
-                                        </a>
-                                    </div>
-                                    <div class="item swiper-slide">
-                                        <a href="javascript:;">
-                                            <img src="img/logo-shunfeng.png" alt=""/>
-                                        </a>
-                                    </div>
-                                    <div class="item swiper-slide">
-                                        <a href="javascript:;">
-                                            <img src="img/logo-shunfeng.png" alt=""/>
-                                        </a>
-                                    </div>
-                                    <div class="item swiper-slide">
-                                        <a href="javascript:;">
-                                            <img src="img/demo/pic3.jpg" alt=""/>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div id="js-home-fuwu-prev-df" class="swiper-button-prev"></div>
-                                <div id="js-home-fuwu-next-df" class="swiper-button-next"></div>
-                            </div>
-                        </div>
-                        <div class="js-hfw-con fuwu-swiper-wrap" id="js-hfw-sw">
-                            <div id="js-home-fuwu-swiper-sw" class="fuwu-swiper-container">
-                                <div class="swiper-wrapper">
-                                    <div class="item swiper-slide">
-                                        <a href="javascript:;">
-                                            <img src="img/logo-shunfeng.png" alt=""/>
-                                        </a>
-                                    </div>
-                                    <div class="item swiper-slide">
-                                        <a href="javascript:;">
-                                            <img src="img/logo-shunfeng.png" alt=""/>
-                                        </a>
-                                    </div>
-                                    <div class="item swiper-slide">
-                                        <a href="javascript:;">
-                                            <img src="img/logo-shunfeng.png" alt=""/>
-                                        </a>
-                                    </div>
-                                    <div class="item swiper-slide">
-                                        <a href="javascript:;">
-                                            <img src="img/logo-shunfeng.png" alt=""/>
-                                        </a>
-                                    </div>
-                                    <div class="item swiper-slide">
-                                        <a href="javascript:;">
-                                            <img src="img/demo/pic3.jpg" alt=""/>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div id="js-home-fuwu-prev-sw" class="swiper-button-prev"></div>
-                                <div id="js-home-fuwu-next-sw" class="swiper-button-next"></div>
-                            </div>
-                        </div>
-                        <div class="js-hfw-con fuwu-swiper-wrap" id="js-hfw-qt">
-                            <div id="js-home-fuwu-swiper-qt" class="fuwu-swiper-container">
-                                <div class="swiper-wrapper">
-                                    <div class="item swiper-slide">
-                                        <a href="javascript:;">
-                                            <img src="img/logo-shunfeng.png" alt=""/>
-                                        </a>
-                                    </div>
-                                    <div class="item swiper-slide">
-                                        <a href="javascript:;">
-                                            <img src="img/logo-shunfeng.png" alt=""/>
-                                        </a>
-                                    </div>
-                                    <div class="item swiper-slide">
-                                        <a href="javascript:;">
-                                            <img src="img/logo-shunfeng.png" alt=""/>
-                                        </a>
-                                    </div>
-                                    <div class="item swiper-slide">
-                                        <a href="javascript:;">
-                                            <img src="img/logo-shunfeng.png" alt=""/>
-                                        </a>
-                                    </div>
-                                    <div class="item swiper-slide">
-                                        <a href="javascript:;">
-                                            <img src="img/demo/pic3.jpg" alt=""/>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div id="js-home-fuwu-prev-qt" class="swiper-button-prev"></div>
-                                <div id="js-home-fuwu-next-qt" class="swiper-button-next"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="Module product">
-            <div class="View container">
-                <div class="hd">
-                    <h3>产品分销</h3>
-                    <a class="more" href="javascript:;">查看更多</a>
-                </div>
-                <div id="js-hp-con" class="bd">
-                    <ul>
+                    <ul class="list">
                         <li>
-                            <a href="javascript:;">
-                                <div class="pic">
-                                    <img src="" alt=""/>
-                                </div>
-                                <span class="name">namenamenamenamenamenamenamename</span>
-                            </a>
+                            <span class="tag highlight">要闻</span>
+                            <a href="javascript:;">国资委召开加强和改进国有企业新闻宣传工作会议</a>
+                            <span class="time">[2015-12-21]</span>
                         </li>
                         <li>
-                            <a href="javascript:;">
-                                <div class="pic">
-                                    <img src="" alt=""/>
-                                </div>
-                                <span class="name">name</span>
-                            </a>
+                            <span class="tag highlight">要闻</span>
+                            <a href="javascript:;">国资委召开加强和改进国有企业新闻宣传工作会议</a>
+                            <span class="time">[2015-12-21]</span>
                         </li>
                         <li>
-                            <a href="javascript:;">
-                                <div class="pic">
-                                    <img src="" alt=""/>
-                                </div>
-                                <span class="name">name</span>
-                            </a>
+                            <span class="tag">要闻</span>
+                            <a href="javascript:;">国资委召开加强和改进国有企业新闻宣传工作会议</a>
+                            <span class="time">[2015-12-21]</span>
                         </li>
                         <li>
-                            <a href="javascript:;">
-                                <div class="pic">
-                                    <img src="" alt=""/>
-                                </div>
-                                <span class="name">name</span>
-                            </a>
+                            <span class="tag">要闻</span>
+                            <a href="javascript:;">国资委召开加强和改进国有企业新闻宣传工作会议</a>
+                            <span class="time">[2015-12-21]</span>
                         </li>
                         <li>
-                            <a href="javascript:;">
-                                <div class="pic">
-                                    <img src="" alt=""/>
-                                </div>
-                                <span class="name">name</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <div class="pic">
-                                    <img src="" alt=""/>
-                                </div>
-                                <span class="name">name</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <div class="pic">
-                                    <img src="" alt=""/>
-                                </div>
-                                <span class="name">name</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <div class="pic">
-                                    <img src="" alt=""/>
-                                </div>
-                                <span class="name">name</span>
-                            </a>
+                            <span class="tag">要闻</span>
+                            <a href="javascript:;">国资委召开加强和改进国有企业新闻宣传工作会议</a>
+                            <span class="time">[2015-12-21]</span>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div id="js-hp-show-all" class="show-all">查看更多</div>
         </div>
     </div>
-    #include("./layout/footer.html")
+    <div class="projects">
+        <div class="View container">
+            <div class="hd">
+                <span class="line"></span>
+                <div class="title">项目信息</div>
+                <div class="tabs">
+                    <div class="tab"><a class="active" href="javascript:;">正在ICO</a></div>
+                    <div class="tab"><a href="javascript:;">已结束ICO</a></div>
+                </div>
+                <a class="more" href="javascript:;">更多</a>
+            </div>
+            <div class="bd">
+                <ul>
+                    <li>
+                    <a href="javascript:;">
+                        <div class="top" style="background-image: url(img/demo/banner.jpg)">
+                            <div class="tip">正在ICO</div>
+                            <div class="time">2017-5-22 18:00:00 - 2017-5-31 18:00:00</div>
+                        </div>
+                        <div class="desc">为什么开发这个项目？ 什么启发我们采取行动来做这个项目？我们认为，言论自由，信息获取和隐私是在互联网和现实生活中应该受到尊重的基本人权..</div>
+                        <div class="progress">
+                            <div class="title">项目进度</div>
+                            <div>
+                                <div class="bar">
+                                    <span class="inner" style="width: 50%;"></span>
+                                </div>
+                                <div class="percent">54.45%</div>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <div class="item">
+                                <span class="val">￥2000.00</span>
+                                <span class="label">目标金额</span>
+                            </div>
+                            <div class="item">
+                                <span class="val">23</span>
+                                <span class="label">剩余天数</span>
+                            </div>
+                            <div class="item">
+                                <span class="val">1.221</span>
+                                <span class="label">支持者</span>
+                            </div>
+                        </div>
+                    </a>
+                    </li>
+                    <li>
+                    <a href="javascript:;">
+                        <div class="top" style="background-image: url(img/demo/banner.jpg)">
+                            <div class="tip">正在ICO</div>
+                            <div class="time">2017-5-22 18:00:00 - 2017-5-31 18:00:00</div>
+                        </div>
+                        <div class="desc">为什么开发这个项目？ 什么启发我们采取行动来做这个项目？我们认为，言论自由，信息获取和隐私是在互联网和现实生活中应该受到尊重的基本人权..</div>
+                        <div class="progress">
+                            <div class="title">项目进度</div>
+                            <div>
+                                <div class="bar">
+                                    <span class="inner" style="width: 50%;"></span>
+                                </div>
+                                <div class="percent">54.45%</div>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <div class="item">
+                                <span class="val">￥2000.00</span>
+                                <span class="label">目标金额</span>
+                            </div>
+                            <div class="item">
+                                <span class="val">23</span>
+                                <span class="label">剩余天数</span>
+                            </div>
+                            <div class="item">
+                                <span class="val">1.221</span>
+                                <span class="label">支持者</span>
+                            </div>
+                        </div>
+                    </a>
+                    </li>
+                    <li>
+                    <a href="javascript:;">
+                        <div class="top" style="background-image: url(img/demo/banner.jpg)">
+                            <div class="tip">正在ICO</div>
+                            <div class="time">2017-5-22 18:00:00 - 2017-5-31 18:00:00</div>
+                        </div>
+                        <div class="desc">为什么开发这个项目？ 什么启发我们采取行动来做这个项目？我们认为，言论自由，信息获取和隐私是在互联网和现实生活中应该受到尊重的基本人权..</div>
+                        <div class="progress">
+                            <div class="title">项目进度</div>
+                            <div>
+                                <div class="bar">
+                                    <span class="inner" style="width: 50%;"></span>
+                                </div>
+                                <div class="percent">54.45%</div>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <div class="item">
+                                <span class="val">￥2000.00</span>
+                                <span class="label">目标金额</span>
+                            </div>
+                            <div class="item">
+                                <span class="val">23</span>
+                                <span class="label">剩余天数</span>
+                            </div>
+                            <div class="item">
+                                <span class="val">1.221</span>
+                                <span class="label">支持者</span>
+                            </div>
+                        </div>
+                    </a>
+                    </li>
+                    <li>
+                    <a href="javascript:;">
+                        <div class="top" style="background-image: url(img/demo/banner.jpg)">
+                            <div class="tip">正在ICO</div>
+                            <div class="time">2017-5-22 18:00:00 - 2017-5-31 18:00:00</div>
+                        </div>
+                        <div class="desc">为什么开发这个项目？ 什么启发我们采取行动来做这个项目？我们认为，言论自由，信息获取和隐私是在互联网和现实生活中应该受到尊重的基本人权..</div>
+                        <div class="progress">
+                            <div class="title">项目进度</div>
+                            <div>
+                                <div class="bar">
+                                    <span class="inner" style="width: 50%;"></span>
+                                </div>
+                                <div class="percent">54.45%</div>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <div class="item">
+                                <span class="val">￥2000.00</span>
+                                <span class="label">目标金额</span>
+                            </div>
+                            <div class="item">
+                                <span class="val">23</span>
+                                <span class="label">剩余天数</span>
+                            </div>
+                            <div class="item">
+                                <span class="val">1.221</span>
+                                <span class="label">支持者</span>
+                            </div>
+                        </div>
+                    </a>
+                    </li>
+                    <li>
+                    <a href="javascript:;">
+                        <div class="top" style="background-image: url(img/demo/banner.jpg)">
+                            <div class="tip">正在ICO</div>
+                            <div class="time">2017-5-22 18:00:00 - 2017-5-31 18:00:00</div>
+                        </div>
+                        <div class="desc">为什么开发这个项目？ 什么启发我们采取行动来做这个项目？我们认为，言论自由，信息获取和隐私是在互联网和现实生活中应该受到尊重的基本人权..</div>
+                        <div class="progress">
+                            <div class="title">项目进度</div>
+                            <div>
+                                <div class="bar">
+                                    <span class="inner" style="width: 50%;"></span>
+                                </div>
+                                <div class="percent">54.45%</div>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <div class="item">
+                                <span class="val">￥2000.00</span>
+                                <span class="label">目标金额</span>
+                            </div>
+                            <div class="item">
+                                <span class="val">23</span>
+                                <span class="label">剩余天数</span>
+                            </div>
+                            <div class="item">
+                                <span class="val">1.221</span>
+                                <span class="label">支持者</span>
+                            </div>
+                        </div>
+                    </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="about1">
+        <div class="View container">
+            <div class="inner">
+                <span class="tip"><span class="green">3ico</span>平台将持续通过网络和技术实力，不断优化数字货币、区块链领域的ICO服务体验，全心全意为广大支持者服务，为广大支持者提供贴心可靠的客户服务。</span>
+                <div class="line"></div>
+                <ul class="list">
+                    <li>
+                        <div class="ico group"></div>
+                        <div class="content">
+                            <div class="title">专业团队</div>
+                            <div class="desc">我们由一支熟悉数字货币、区块链、互联网金融运作方式的团队开发并运营。</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ico cloud"></div>
+                        <div class="content">
+                            <div class="title">投资资源</div>
+                            <div class="desc">我们拥有一批来自于数字货币、区块链、金融、科技、基金领域的投资资源。</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ico idea"></div>
+                        <div class="content">
+                            <div class="title">用户体验</div>
+                            <div class="desc">我们提供客服在线及技术支持，确保产品每一环节使用流畅。</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="about2">
+        <div class="View container">
+            <div class="item">
+                <i class="ico-safe"></i><br/><br/>
+                <span>安全</span>
+            </div>
+            <div class="item">
+                <i class="ico-credit"></i><br/><br/>
+                <span>诚信</span>
+            </div>
+            <div class="item">
+                <i class="ico-fair"></i><br/><br/>
+                <span>公平</span>
+            </div>
+            <div class="item">
+                <i class="ico-transparent"></i><br/><br/>
+                <span>透明</span>
+            </div>
+        </div>
+    </div>
+    <div class="partner">
+        <div class="View container">
+            <div class="hd">
+                <div class="line"></div>
+                <div class="title">合作伙伴</div>
+            </div>
+            <ul class="bd">
+                <li>
+                    <a href="javascript:;"><img src="img/demo/link1.jpg"></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="img/demo/link2.jpg"></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="img/demo/link3.jpg"></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="img/demo/link4.jpg"></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="img/demo/link5.jpg"></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="img/demo/link6.jpg"></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="img/demo/link7.jpg"></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="img/demo/link8.jpg"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="Frame bottom">
+        <div class="View container">
+            <div class="menus">
+                <div class="hd">3ico科技文化发展有限公司</div>
+                <ul>
+                    <li><i class="ico arrow"></i><a href="javascript:;">首页</a></li>
+                    <li><i class="ico arrow"></i><a href="javascript:;">项目信息</a></li>
+                    <li><i class="ico arrow"></i><a href="javascript:;">PUSH集市</a></li>
+                    <li><i class="ico arrow"></i><a href="javascript:;">关于我们</a></li>
+                    <li><i class="ico arrow"></i><a href="javascript:;">联系我们</a></li>
+                </ul>
+            </div>
+            <div class="contact">
+                <div class="hd">联系我们</div>
+                <ul>
+                    <li>
+                        <i class="ico telephone"></i>
+                        010-4029182
+                    </li>
+                    <li>
+                        <i class="ico mail"></i>
+                        zhtx@163.com
+                    </li>
+                    <li>
+                        <i class="ico phone"></i>
+                        13715933598
+                    </li>
+                    <li>
+                        <i class="ico location"></i>
+                        北京市海淀区上地东路京蒙高科B座607室
+                    </li>
+                </ul>
+            </div>
+            <div class="map">
+                <div class="hd">公司地图</div>
+                <div class="inner">
+                    <img src="img/demo/map.jpg">
+                </div>
+            </div>
+            <div class="follow">
+                <div class="weibo"><wb:follow-button uid="2991975565" type="red_1" width="67" height="24" ></wb:follow-button></div>
+                <div class="qrcode">
+                3ico微信关注<br/><br/>
+                <img src="img/qrcode.jpg"></div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="View container">
+            CopyRight © 2017 All Rights Reserved. 版权所有 ©
+            <a href="/">3IC科技文化发展有限公司</a>
+        </div>
+    </div>
 </body>
 </html>
