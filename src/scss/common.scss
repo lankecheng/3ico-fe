@@ -11,4 +11,9 @@ a{
     position: relative;
     margin: 0 auto;
     width: 1170px;
+    @include clearfix;
+}
+
+.primary-color{
+    color: #22a875;
 }

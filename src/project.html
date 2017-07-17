@@ -1,0 +1,139 @@
+#include("./layout/head.html")
+<body class="project">
+    #include("./layout/top.html")
+    #include("./layout/header.html")
+    <div class="Module top">
+        <div class="View container">
+            <div class="title">项目进展</div>
+            <div class="crumb">首页/项目信息/项目进展</div>
+        </div>
+    </div>
+    <div class="tabs"></div>
+
+    <div class="main">
+        <div class="View container">
+            <div class="left">这里输出项目内容</div>
+            <div class="right">
+                <div class="mod info">
+                    <div class="item">
+                        <span class="label">支持人数</span>
+                        <div id="js-number" class="content">0</div>
+                    </div>
+                    <div class="item">
+                        <span class="label">目标金额</span>
+                        <div id="js-target-amount" class="content">￥0</div>
+                    </div>
+                    <!-- <div class="item">
+                        <span class="label">剩余天数</span>
+                        <div class="content">0</div>
+                    </div> -->
+                    <div class="progress">
+                        <div class="title">项目进度<span id="js-progress-num" style="float: right;">0%</span></div>
+                        <div class="bar">
+                            <span id="js-progress-bar" class="inner" style="width: 0%;"></span>
+                        </div>
+                        <div class="tip">
+                            此项目将在
+                            <span id="js-end-time" class="primary-color">0</span>
+                            前结束，有任何问题需要咨询请联系客服！
+                        </div>
+                    </div>
+                    <div class="control">
+                        <input id="js-pay-input" type="text" name="" placeholder="输出支持金额">
+                        <div style="display: inline-block;"
+                        id="js-pay" class="btn">我要支持</div>
+                    </div>
+                </div>
+                <div class="mod by">
+                    <div class="hd">
+                    <i class="ico-by"></i>
+                    项目发起人</div>
+                    <div class="bd">
+                        <div class="avatar"><img src="img/demo/avatar.png" width="74" height="74"></div>
+                        <div class="content">
+                            <div class="nick">李金华</div>
+                            <div class="sub">项目负责人</div>
+                            <div class="time">
+                            上次登录时间：
+                            <span class="primary-color">2017-06-24</span>
+                            </div>
+                            <div class="btn"><i class="ico-msg"></i>发送私信</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mod detail">
+                    <div class="bd">
+                        <i class="ico-book"></i>
+                        <div class="content">
+                            <div class="title">项目白皮书</div>
+                            <a href="javascript:;" class="btn">点击查看详情</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mod bottom">
+                    <div class="hd">
+                        <span class="title">
+                        <span class="primary">B/</span>
+                        金额不限</span>
+                        <span class="joined">已参与<span class="primary-color">600</span>人</span>
+                    </div>
+                    <div class="bd">
+                        不限投资人数<br/>
+                        回报时间：预计项目ICO成功结束后30天内
+                    </div>
+                    <div class="control">
+                        <div class="btn">立即支持</div>
+                    </div>
+                </div>
+                <div class="mod bottom">
+                    <div class="hd">
+                        <span class="title">
+                        <span class="primary">ETH/</span>
+                        金额不限</span>
+                        <span class="joined">已参与<span class="primary-color">600</span>人</span>
+                    </div>
+                    <div class="bd">
+                        不限投资人数<br/>
+                        回报时间：预计项目ICO成功结束后30天内
+                    </div>
+                    <div class="control">
+                        <div class="btn">立即支持</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+#include("./layout/footer.html")
+<script type="text/javascript">
+(function() {
+    var pid = location.search.split('=')[1];
+    $.get('http://119.23.160.90:8080/api/project_info', {
+        pid: pid
+    }).then(function (res) {
+        var project = res.project;
+        var progress = Math.round((project.complete_amount/project.target_amount)*100);
+        $('#js-number').html(project.number);
+        $('#js-target-amount').html('￥'+project.target_amount);
+        $('#js-end-time').html(project.end_time);
+        $('#js-progress-num').html(progress + '%');
+        $('#js-progress-bar').css({
+            width: progress + '%'
+        });
+    });
+    $('#js-pay').on('click', function (e) {
+        var price = $('#js-pay-input').val();
+        if (!price) return;
+        $.post('http://119.23.160.90:8080/api/user/invest', {
+            pid: pid,
+            uid: '',
+            amount: price,
+        }).then(function (res) {
+            alert('支持成功，感谢您的支持！');
+        }).fail(function (res) {
+            alert(res.responseJSON.error_msg);
+        });
+    });
+})()
+</script>
+</body>
+</html>

@@ -1,62 +1,7 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:wb="http://open.weibo.com/wb">
-<head>
-    <meta charset="UTF-8">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>3ICO</title>
-    <script src="js/jquery-1.10.1.min.js"></script>
-    <script src="js/swiper-3.4.2.jquery.min.js"></script>
-    <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
-</head>
+#include("./layout/head.html")
 <body class="home">
-    <div class="Frame top">
-        <div class="View container">
-            <span>www.3ico.com</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <span>
-                <i class="ico-phone"></i>
-                +13615966354
-            </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <span>
-            ICO is Initial Crypto-Token Offering 比特币：<span class="green">15836.9178</span>元
-            以太坊：<span class="green">1357.66761</span> 元
-            </span>
-            <ul class="menus">
-                <li>
-                    <a class="login" href="javascript:;">
-                        <i class="ico-user"></i>
-                        登录
-                    </a>
-                </li>
-                <li>
-                    <a class="register" href="javascript:;">注册</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="header">
-        <div class="View container">
-            <h1 class="logo"><img src="img/logo.png"></h1>
-            <ul class="menus">
-                <li>
-                    <a  class="active" href="javascript:;">首页</a>
-                </li>
-                <li>
-                    <a href="javascript:;">项目信息</a>
-                </li>
-                <li>
-                    <a href="javascript:;">push集市</a>
-                </li>
-                <li>
-                    <a href="javascript:;">关于我们</a>
-                </li>
-                <li>
-                    <a href="javascript:;">联系我们</a>
-                </li>
-            </ul>
-        </div>
-    </div>
+    #include("./layout/top.html")
+    #include("./layout/header.html")
     <div id="js-home-banner" class="banner-swiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide" style="background-image: url(img/demo/banner.jpg);">
@@ -443,58 +388,8 @@
             </ul>
         </div>
     </div>
-    <div class="Frame bottom">
-        <div class="View container">
-            <div class="menus">
-                <div class="hd">3ico科技文化发展有限公司</div>
-                <ul>
-                    <li><i class="ico arrow"></i><a href="javascript:;">首页</a></li>
-                    <li><i class="ico arrow"></i><a href="javascript:;">项目信息</a></li>
-                    <li><i class="ico arrow"></i><a href="javascript:;">PUSH集市</a></li>
-                    <li><i class="ico arrow"></i><a href="javascript:;">关于我们</a></li>
-                    <li><i class="ico arrow"></i><a href="javascript:;">联系我们</a></li>
-                </ul>
-            </div>
-            <div class="contact">
-                <div class="hd">联系我们</div>
-                <ul>
-                    <li>
-                        <i class="ico telephone"></i>
-                        010-4029182
-                    </li>
-                    <li>
-                        <i class="ico mail"></i>
-                        zhtx@163.com
-                    </li>
-                    <li>
-                        <i class="ico phone"></i>
-                        13715933598
-                    </li>
-                    <li>
-                        <i class="ico location"></i>
-                        北京市海淀区上地东路京蒙高科B座607室
-                    </li>
-                </ul>
-            </div>
-            <div class="map">
-                <div class="hd">公司地图</div>
-                <div class="inner">
-                    <img src="img/demo/map.jpg">
-                </div>
-            </div>
-            <div class="follow">
-                <div class="weibo"><wb:follow-button uid="2991975565" type="red_1" width="67" height="24" ></wb:follow-button></div>
-                <div class="qrcode">
-                3ico微信关注<br/><br/>
-                <img src="img/qrcode.jpg"></div>
-            </div>
-        </div>
-    </div>
-    <div class="copyright">
-        <div class="View container">
-            CopyRight © 2017 All Rights Reserved. 版权所有 ©
-            <a href="/">3IC科技文化发展有限公司</a>
-        </div>
-    </div>
+
+#include("./layout/footer.html")
+
 </body>
 </html>

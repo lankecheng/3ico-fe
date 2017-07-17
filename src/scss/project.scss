@@ -1,0 +1,247 @@
+.project{
+    >.main{
+        padding-bottom: 60px;
+    }
+    .Module.top{
+        padding: 35px 0;
+        background-color: #373737;
+        .title{
+            font-size: 30px;
+            color: #fff;
+        }
+        .crumb{
+            margin-top: 10px;
+            font-size: 14px;
+            color: rgba(245, 245, 245, .6);
+        }
+    }
+    .main{
+        margin-top: 40px;
+        @include clearfix;
+    }
+    .left{
+        float: left;
+        width: 786px;
+        min-height: 600px;
+    }
+    .right{
+        float: right;
+        width: 343px;
+        .mod{
+            padding: 35px 30px;
+            border: 1px solid #e2e2e2;
+            background-color: #f8f8f8;
+            +.mod{
+                margin-top: 30px;
+            }
+
+            .control{
+                margin-top: 40px;
+                .btn{
+                    display: block;
+                    padding: 0 20px;
+                    height: 48px;
+                    line-height: 48px;
+                    text-align: center;
+                    border-radius: 3px;
+                    color: #fff;
+                    background: linear-gradient(#22a875, #1b9b6b);
+                    cursor: pointer;
+                    &:hover{
+                        opacity: .9;
+                    }
+                }
+            }
+
+            &.info{
+                .item{
+                    position: relative;
+                    padding-left: 80px;
+                    .label{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        display: block;
+                        width: 70px;
+                        height: 30px;
+                        line-height: 30px;
+                    }
+                    .content{
+                        font-size: 24px;
+                        line-height: 1;
+                        color: #22a875;
+                    }
+                    +.item{
+                        margin-top: 30px;
+                    }
+                }
+                .progress{
+                    margin-top: 40px;
+                    .title{
+                        font-size: 16px;
+                        color: #22a875;
+                    }
+                    .bar{
+                        margin-top: 20px;
+                        display: inline-block;
+                        width: 100%;
+                        height: 14px;
+                        background-color: #f1f1f1;
+                        border-radius: 14px;
+                        box-shadow: 0 1px 1px rgba(0, 0, 0, .1) inset;
+                        vertical-align: top;
+                        overflow: hidden;
+                        .inner{
+                            box-sizing: border-box;
+                            display: block;
+                            height: 100%;
+                            background-color: #7ed352;
+                            border: 1px solid #52d37c;
+                            border-top-left-radius: 14px;
+                            border-bottom-left-radius: 14px;
+                            box-shadow: 0 1px 1px rgba(255, 255, 255, .5) inset;
+                        }
+                    }
+                    .tip{
+                        margin-top: 20px;
+                        color: #666;
+                        font-size: 14px;
+                        line-height: 1.5;
+                    }
+                }
+                .control{
+                    input{
+                        width: 150px;
+                        height: 48px;
+                        border: 1px solid #ddd;
+                        border-radius: 3px;
+                        outline: none;
+                        &::-webkit-input-placeholder{
+                            color: #ddd;
+                        }
+                    }
+                }
+            }
+            &.by{
+                .hd{
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: #333;
+                }
+                .ico-by{
+                    margin-right: 10px;
+                    display: inline-block;
+                    width: 32px;
+                    height: 32px;
+                    background: url(../img/ico-project.png) no-repeat 0 0;
+                    vertical-align: middle;
+                }
+                .ico-msg{
+                    margin-right: 10px;
+                    display: inline-block;
+                    width: 31px;
+                    height: 35px;
+                    background: url(../img/ico-project.png) no-repeat -120px 0;
+                    vertical-align: bottom;
+                }
+                .bd{
+                    margin-top: 30px;
+                    padding-left: 90px;
+                    position: relative;
+                    .avatar{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                    .content{
+                        .nick{
+                            font-size: 18px;
+                            color: #21a674;
+                        }
+                        .sub{
+                            margin-top: 10px;
+                            font-size: 14px;
+                            color: #333333;
+                        }
+                        .time{
+                            margin-top: 15px;
+                            font-size: 14px;
+                            color: #333333;
+                        }
+                        .btn{
+                            margin-top: 25px;
+                            width: 175px;
+                            height: 40px;
+                            line-height: 40px;
+                            text-align: center;
+                            border: 1px solid #23a474;
+                            background-color: #f8f8f8;
+                            color: #23a474;
+                            border-radius: 3px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            &.detail{
+                .ico-book{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: inline-block;
+                    width: 74px;
+                    height: 74px;
+                    background: url(../img/ico-project.png) no-repeat -40px 0;
+                    vertical-align: middle;
+                }
+                .bd{
+                    position: relative;
+                    padding-left: 90px;
+                    .title{
+                        font-size: 18px;
+                        font-weight: bold;
+                        color: #333;
+                    }
+                    .btn{
+                        margin-top: 18px;
+                        display: block;
+                        height: 48px;
+                        line-height: 48px;
+                        text-align: center;
+                        border-radius: 3px;
+                        color: #fff;
+                        background: linear-gradient(#22a875, #1b9b6b);
+                        cursor: pointer;
+                        &:hover{
+                            opacity: .9;
+                        }
+                    }
+                }
+            }
+            &.bottom{
+                .hd{
+                    padding-bottom: 10px;
+                    color: #333;
+                    border-bottom: 1px solid #e4e4e4;
+                    .primary{
+                        font-size: 18px;
+                        color: #22a875;
+                    }
+                    .joined{
+                        float: right;
+                        font-size: 14px;
+                    }
+                }
+                .bd{
+                    margin-top: 15px;
+                    font-size: 14px;
+                    font-weight: bold;
+                    line-height: 2;
+                }
+                .control{
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}
