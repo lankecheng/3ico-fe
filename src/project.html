@@ -107,8 +107,15 @@
 <script type="text/javascript">
 (function() {
     var pid = location.search.split('=')[1];
-    $.get('http://119.23.160.90:8080/api/project_info', {
-        pid: pid
+    $.ajax({
+        type: 'get',
+        url: 'http://119.23.160.90:8080/api/project_info',
+        data: {
+            pid: pid
+        },
+        headers: {
+            Authorization: localStorage.getItem('token'),
+        }
     }).then(function (res) {
         var project = res.project;
         var progress = Math.round((project.complete_amount/project.target_amount)*100);
@@ -123,10 +130,16 @@
     $('#js-pay').on('click', function (e) {
         var price = $('#js-pay-input').val();
         if (!price) return;
-        $.post('http://119.23.160.90:8080/api/user/invest', {
-            pid: pid,
-            uid: '',
-            amount: price,
+        $.ajax({
+            type: 'post',
+            url: 'http://119.23.160.90:8080/api/user/invest',
+            data: {
+                pid: pid,
+                amount: price,
+            },
+            headers: {
+                Authorization: localStorage.getItem('token'),
+            }
         }).then(function (res) {
             alert('支持成功，感谢您的支持！');
         }).fail(function (res) {
