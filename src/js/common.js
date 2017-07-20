@@ -1,7 +1,7 @@
 (function () {
     $.ajax({
         type: 'get',
-        url: 'http://119.23.160.90:8080/api/user/info',
+        url: 'http://119.23.160.90:8080/api/user/profile/info',
         headers: {
             Authorization: localStorage.getItem('token'),
         }
