@@ -18,6 +18,7 @@
                 Authorization: localStorage.getItem('token'),
             }
         }).then(function (res) {
+            localStorage.removeItem('token');
             location.reload();
         });
     });
