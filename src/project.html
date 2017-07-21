@@ -132,7 +132,7 @@
         if (!price) return;
         $.ajax({
             type: 'post',
-            url: 'http://172.16.200.15:8080/api/biz/invest',
+            url: 'http://172.16.200.15:8080/api/user/invest/do',
             data: {
                 pid: pid,
                 amount: price,
