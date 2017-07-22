@@ -17,3 +17,17 @@ a{
 .primary-color{
     color: #22a875;
 }
+
+.Module.top{
+    padding: 35px 0;
+    background-color: #373737;
+    .title{
+        font-size: 30px;
+        color: #fff;
+    }
+    .crumb{
+        margin-top: 10px;
+        font-size: 14px;
+        color: rgba(245, 245, 245, .6);
+    }
+}

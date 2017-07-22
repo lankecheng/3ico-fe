@@ -1,0 +1,82 @@
+#include("./layout/head.html")
+<body class="project-list">
+    #include("./layout/top.html")
+    #include("./layout/header.html")
+    <div class="Module top">
+        <div class="View container">
+            <div class="title">ICO日历</div>
+            <div class="crumb">首页/ICO日历</div>
+        </div>
+    </div>
+
+    <div class="View container">
+        <div class="tabs">
+            <ul>
+                <li><a class="active" href="javascript:;">全部</a></li>
+                <li><a href="javascript:;">已完成</a></li>
+                <li><a href="javascript:;">进行中</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="View container">
+    <div class="list">
+        <table>
+            <thead>
+                <tr>
+                    <th>项目名称</th>
+                    <th>开始时间</th>
+                    <th>结束时间</th>
+                    <th style="width: 300px;">备注</th>
+                    <th style="width: 130px;"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!-- <td></td> -->
+                    <td>
+                        <div class="name">沃尔顿链</div>
+                        <div class="desc">全球去中心化的价值物联网商业生态链</div>
+                    </td>
+                    <td>2017-12-12 12:00:00</td>
+                    <td>2017-12-12 12:00:00</td>
+                    <td>构建物联网和区块链完美结合的商业生态链，引领人类全面进入可信赖的数字化生活，开创价值物联网的新纪元。Walton团队做出四个阶段性规划，由底层基础平台建立，逐步扩散至零售、物流，最终整合产品生产厂家，步步为营，实现商业生态纵深的全覆盖。</td>
+                    <td><a class="link" href="javascript:;">查看详情</a></td>
+                </tr>
+                <tr>
+                    <!-- <td></td> -->
+                    <td>
+                        <div class="name">沃尔顿链</div>
+                        <div class="desc">全球去中心化的价值物联网商业生态链</div>
+                    </td>
+                    <td>2017-12-12 12:00:00</td>
+                    <td>2017-12-12 12:00:00</td>
+                    <td>构建物联网和区块链完美结合的商业生态链，引领人类全面进入可信赖的数字化生活，开创价值物联网的新纪元。Walton团队做出四个阶段性规划，由底层基础平台建立，逐步扩散至零售、物流，最终整合产品生产厂家，步步为营，实现商业生态纵深的全覆盖。</td>
+                    <td><a class="link" href="javascript:;">查看详情</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+
+#include("./layout/footer.html")
+
+
+<script type="text/javascript">
+(function() {
+    // var pid = location.search.split('=')[1];
+    $.ajax({
+        type: 'get',
+        url: 'http://119.23.160.90:8080/api/project_list',
+        data: {
+        },
+        headers: {
+            Authorization: localStorage.getItem('token'),
+        }
+    }).then(function (res) {
+        console.log(res);
+    });
+})()
+</script>
+</body>
+</html>

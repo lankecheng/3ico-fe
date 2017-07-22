@@ -11,4 +11,11 @@
         nextButton: '#js-home-notice-next',
         autoplay: 4000,
     });
+    $(document).on('click', '.js-ico-tab', function (e) {
+        var tab = $(this).data('val');
+        $('.js-ico-tab').find('a').removeClass('active');
+        $(this).find('a').addClass('active');
+        $('.js-ico-bd').hide();
+        $('#js-' + tab).show();
+    });
 })()
