@@ -1,7 +1,7 @@
 (function () {
     $.ajax({
         type: 'get',
-        url: 'http://172.16.200.15:8080/api/user/profile/info',
+        url: 'http://119.23.160.90:8080/api/user/profile/info',
         headers: {
             Authorization: localStorage.getItem('token'),
         }
@@ -13,7 +13,7 @@
     $(document).on('click', '#js-logout', function () {
         $.ajax({
             type: 'post',
-            url: 'http://172.16.200.15:8080/api/auth/logout',
+            url: 'http://119.23.160.90:8080/api/auth/logout',
             headers: {
                 Authorization: localStorage.getItem('token'),
             }

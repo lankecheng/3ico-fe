@@ -109,7 +109,7 @@
     var pid = location.search.split('=')[1];
     $.ajax({
         type: 'get',
-        url: 'http://172.16.200.15:8080/api/project_info',
+        url: 'http://119.23.160.90:8080/api/project_info',
         data: {
             pid: pid
         },
@@ -132,7 +132,7 @@
         if (!price) return;
         $.ajax({
             type: 'post',
-            url: 'http://172.16.200.15:8080/api/user/invest/do',
+            url: 'http://119.23.160.90:8080/api/user/invest/do',
             data: {
                 pid: pid,
                 amount: price,
