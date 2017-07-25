@@ -10,7 +10,7 @@
     </div>
     <div class="tabs"></div>
 
-    <div class="main">
+    <div id="js-project" class="main">
         <div class="View container">
             <div class="left">这里输出项目内容</div>
             <div class="right">
@@ -20,7 +20,7 @@
                         <div id="js-number" class="content">0</div>
                     </div>
                     <div class="item">
-                        <span class="label">目标金额</span>
+                        <span class="label">目标数量</span>
                         <div id="js-target-amount" class="content">￥0</div>
                     </div>
                     <!-- <div class="item">
@@ -39,7 +39,7 @@
                         </div>
                     </div>
                     <div class="control">
-                        <input id="js-pay-input" type="text" name="" placeholder="输出支持金额">
+                        <input id="js-pay-input" type="text" name="" placeholder="输入支持数量">
                         <div style="display: inline-block;"
                         id="js-pay" class="btn">我要支持</div>
                     </div>
@@ -104,6 +104,8 @@
         </div>
     </div>
 #include("./layout/footer.html")
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-default/index.css">
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
 <script type="text/javascript">
 (function() {
     var pid = location.search.split('=')[1];

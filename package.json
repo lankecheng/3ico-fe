@@ -35,5 +35,8 @@
     "url-loader": "^0.5.9",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.5.0"
+  },
+  "dependencies": {
+    "element-ui": "^1.4.0"
   }
 }
