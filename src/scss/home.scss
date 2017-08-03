@@ -611,9 +611,9 @@
                 .item{
                     box-sizing: border-box;
                     display: inline-block;
-                    width: 30%;
-                    padding: 0 10px;
-                    font-size: 14px;
+                    width: 47%;
+                    padding: 0 5px;
+                    font-size: 12px;
                     vertical-align: top;
                     .val{
                         display: block;
@@ -641,7 +641,7 @@
         .inner{
             position: absolute;
             left: 50%;
-            margin-top: 60px;
+            margin-top: 50px;
             margin-left: 40px;
             line-height: 1.6;
             color: #fff;
@@ -660,14 +660,14 @@
                 list-style: none;
                 li{
                     position: relative;
-                    margin-top: 50px;
+                    margin-top: 30px;
                     padding-left: 120px;
                     .title{
                         font-size: 24px;
                     }
                     .desc{
-                        margin-top: 20px;
-                        font-size: 14px;
+                        margin-top: 10px;
+                        font-size: 12px;
                     }
                 }
                 .ico{

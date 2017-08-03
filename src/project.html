@@ -14,14 +14,14 @@
         <div class="View container">
             <div class="left">这里输出项目内容</div>
             <div class="right">
-                <div class="mod info">
+                <div id="js-info" class="mod info">
                     <div class="item">
                         <span class="label">支持人数</span>
                         <div id="js-number" class="content">0</div>
                     </div>
                     <div class="item">
                         <span class="label">目标数量</span>
-                        <div id="js-target-amount" class="content">￥0</div>
+                        <div class="js-target-amount" class="content">0</div>
                     </div>
                     <!-- <div class="item">
                         <span class="label">剩余天数</span>
@@ -37,6 +37,10 @@
                             <span id="js-end-time" class="primary-color">0</span>
                             前结束，有任何问题需要咨询请联系客服！
                         </div>
+                    </div>
+                    <div class="item">
+                        <span class="label">余额</span>
+                        <div id="js-balance" class="content">0</div>
                     </div>
                     <div class="control">
                         <input id="js-pay-input" type="text" name="" placeholder="输入支持数量">
@@ -70,42 +74,22 @@
                         </div>
                     </div>
                 </div>
-                <div class="mod bottom">
+                <div id="js-ETH" class="mod bottom">
                     <div class="hd">
-                        <span class="title">
-                        <span class="primary">B/</span>
-                        金额不限</span>
+                        <span class="js-target-amount title"></span>
                         <span class="joined">已参与<span class="primary-color">600</span>人</span>
                     </div>
                     <div class="bd">
                         不限投资人数<br/>
                         回报时间：预计项目ICO成功结束后30天内
-                    </div>
-                    <div class="control">
-                        <div class="btn">立即支持</div>
-                    </div>
-                </div>
-                <div class="mod bottom">
-                    <div class="hd">
-                        <span class="title">
-                        <span class="primary">ETH/</span>
-                        金额不限</span>
-                        <span class="joined">已参与<span class="primary-color">600</span>人</span>
-                    </div>
-                    <div class="bd">
-                        不限投资人数<br/>
-                        回报时间：预计项目ICO成功结束后30天内
-                    </div>
-                    <div class="control">
-                        <div class="btn">立即支持</div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 #include("./layout/footer.html")
-<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-default/index.css">
-<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="js/popup.js"></script>
 <script type="text/javascript">
 (function() {
     var pid = location.search.split('=')[1];
@@ -122,12 +106,15 @@
         var project = res.project;
         var progress = Math.round((project.complete_amount/project.target_amount)*100);
         $('#js-number').html(project.number);
-        $('#js-target-amount').html('￥'+project.target_amount);
+        $('.js-target-amount').html(project.target_amount+project.currency);
         $('#js-end-time').html(project.end_time);
         $('#js-progress-num').html(progress + '%');
         $('#js-progress-bar').css({
             width: progress + '%'
         });
+        if (new Date(project.begin_time).getTime() < new Date().getTime()) {
+            $('#js-info').show();
+        }
     });
     $('#js-pay').on('click', function (e) {
         var price = $('#js-pay-input').val();
@@ -143,9 +130,26 @@
                 Authorization: localStorage.getItem('token'),
             }
         }).then(function (res) {
-            alert('支持成功，感谢您的支持！');
+
+            var popup = new Popup();
+            popup.innerHTML =
+             '<div class="ui-dialog">支持成功，感谢您的支持！</div>';
+            popup.show();
+
+            setTimeout(function() {
+                popup.close().remove();
+                location.reload();
+            }, 2000);
+
         }).fail(function (res) {
-            alert(res.responseJSON.error_msg);
+            var popup = new Popup();
+            popup.innerHTML =
+             '<div class="ui-dialog">'+res.responseJSON.error_msg+'</div>';
+            popup.show();
+
+            setTimeout(function() {
+                popup.close().remove();
+            }, 2000);
         });
     });
 })()
