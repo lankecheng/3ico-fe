@@ -21,7 +21,7 @@
     }
     .left{
         float: left;
-        width: 616px;
+        width: 670px;
         min-height: 600px;
         img{
             max-width: 100%;
@@ -29,7 +29,7 @@
     }
     .right{
         float: right;
-        width: 343px;
+        width: 300px;
         .mod{
             padding: 35px 30px;
             border: 1px solid #e2e2e2;
@@ -73,7 +73,7 @@
                     }
                     .content{
                         font-size: 24px;
-                        line-height: 1;
+                        line-height: 30px;
                         color: #22a875;
                     }
                     +.item{
@@ -116,7 +116,7 @@
                 }
                 .control{
                     input{
-                        width: 150px;
+                        width: 120px;
                         height: 48px;
                         border: 1px solid #ddd;
                         border-radius: 3px;
@@ -151,7 +151,7 @@
                 }
                 .bd{
                     margin-top: 30px;
-                    padding-left: 90px;
+                    padding-left: 80px;
                     position: relative;
                     .avatar{
                         position: absolute;
@@ -175,7 +175,7 @@
                         }
                         .btn{
                             margin-top: 25px;
-                            width: 175px;
+                            width: 130px;
                             height: 40px;
                             line-height: 40px;
                             text-align: center;
