@@ -1,158 +1,290 @@
-#include("./layout/head.html")
-<body class="project">
-    #include("./layout/top.html")
-    #include("./layout/header.html")
-    <div class="Module top">
-        <div class="View container">
-            <div class="title">项目进展</div>
-            <div class="crumb">首页/项目信息/项目进展</div>
-        </div>
-    </div>
-    <div class="tabs"></div>
+<!DOCTYPE html>
+<html lang="en" xmlns:wb="http://open.weibo.com/wb">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3ICO</title>
+    <script src="/fe/js/jquery-1.10.1.min.js"></script>
+    <script src="/fe/js/swiper-3.4.2.jquery.min.js"></script>
+    <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+    <link href="/fe/css/app.css" rel="stylesheet">
+</head>
 
-    <div id="js-project" class="main">
-        <div class="View container">
-            <div class="left">这里输出项目内容</div>
-            <div class="right">
-                <div id="js-info" class="mod info">
-                    <div class="item">
-                        <span class="label">支持人数</span>
-                        <div id="js-number" class="content">0</div>
+<body class="project">
+<div class="Frame top">
+    <div class="View container">
+        <span>www.3ico.com</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <span>
+        官方QQ群：①661222492&nbsp;&nbsp;②661733862&nbsp;&nbsp;
+        客服QQ：①489941545&nbsp;&nbsp;②1690176159
+
+        </span>
+        <ul class="menus">
+            <li id="js-login">
+                <a class="login" href="/manage/index.html#/login">
+                    <i class="ico-user"></i>
+                    登录
+                </a>
+            </li>
+            <li id="js-register">
+                <a class="register" href="/manage/index.html#/register">注册</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="header">
+    <div class="View container">
+        <h1 class="logo"><img src="/fe/img/logo.png"></h1>
+        <ul class="menus">
+            <li>
+                <a class="active" href="/fe/home">首页</a>
+            </li>
+            <li>
+                <a href="/manage/index.html#/projects">项目信息</a>
+            </li>
+
+            <li>
+                <a href="/manage/index.html#/about">关于我们</a>
+            </li>
+            <li>
+                <a href="/manage/index.html#/contact">联系我们</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="Module top">
+    <div class="View container">
+        <div id="js-title" class="title">项目</div>
+        <!--<div class="crumb">首页/项目信息/项目进展</div>-->
+    </div>
+</div>
+<div class="tabs"></div>
+
+<div class="main">
+    <div class="View container">
+        <div class="left">${PROJECT_INTRO}</div>
+        <div class="right">
+            <div id="js-info" class="mod info" style="display: none">
+                <div class="item">
+                    <span class="label">支持人数</span>
+                    <div id="js-number" class="content">0</div>
+                </div>
+                <div class="item">
+                    <span class="label">目标数量</span>
+                    <div id="js-target-amount" class="js-target-amount content">0</div>
+                </div>
+
+                <div class="progress">
+                    <div class="title">项目进度<span id="js-progress-num" style="float: right">0%</span></div>
+                    <div class="bar">
+                        <span id="js-progress-bar" class="inner" style="width: 0%"></span>
                     </div>
-                    <div class="item">
-                        <span class="label">目标数量</span>
-                        <div class="js-target-amount content">0</div>
-                    </div>
-                    <!-- <div class="item">
-                        <span class="label">剩余天数</span>
-                        <div class="content">0</div>
-                    </div> -->
-                    <div class="progress">
-                        <div class="title">项目进度<span id="js-progress-num" style="float: right;">0%</span></div>
-                        <div class="bar">
-                            <span id="js-progress-bar" class="inner" style="width: 0%;"></span>
-                        </div>
-                        <div class="tip">
-                            此项目将在
-                            <span id="js-end-time" class="primary-color">0</span>
-                            前结束，有任何问题需要咨询请联系客服！
-                        </div>
-                    </div>
-                    <div class="item">
-                        <span class="label">余额</span>
-                        <div id="js-balance" class="content">0</div>
-                    </div>
-                    <div class="control">
-                        <input id="js-pay-input" type="text" name="" placeholder="输入支持数量">
-                        <div style="display: inline-block;"
-                        id="js-pay" class="btn">我要支持</div>
+                    <div class="tip">
+                        此项目将在
+                        <span id="js-end-time" class="primary-color">0</span>
+                        前结束，有任何问题需要咨询请联系客服！
                     </div>
                 </div>
-                <div class="mod by">
-                    <div class="hd">
+                <div class="item">
+                    <span class="label"></span>
+                    <div class="content"></div>
+                </div>
+                <div class="item">
+                    <span class="label">余额</span>
+                    <div id="js-user-balance" class="content">0</div>
+                </div>
+                <div class="control">
+                    <input id="js-pay-input" type="text" name="" placeholder="输入支持数量">
+                    <div style="display: inline-block" id="js-pay" class="btn">我要支持</div>
+                </div>
+            </div>
+            <div class="mod by">
+                <div class="hd">
                     <i class="ico-by"></i>
-                    项目发起人</div>
-                    <div class="bd">
-                        <div class="avatar"><img src="img/demo/avatar.png" width="74" height="74"></div>
-                        <div class="content">
-                            <div class="nick">李金华</div>
-                            <div class="sub">项目负责人</div>
-                            <div class="time">
-                            上次登录时间：
-                            <span class="primary-color">2017-06-24</span>
-                            </div>
-                            <div class="btn"><i class="ico-msg"></i>发送私信</div>
-                        </div>
-                    </div>
+                    项目发起人
                 </div>
-                <div class="mod detail">
-                    <div class="bd">
-                        <i class="ico-book"></i>
-                        <div class="content">
-                            <div class="title">项目白皮书</div>
-                            <a href="javascript:;" class="btn">点击查看详情</a>
-                        </div>
-                    </div>
-                </div>
-                <div id="js-ETH" class="mod bottom">
-                    <div class="hd">
-                        <span class="js-target-amount title"></span>
-                        <span class="joined">已参与<span class="primary-color">600</span>人</span>
-                    </div>
-                    <div class="bd">
-                        不限投资人数<br/>
-                        回报时间：预计项目ICO成功结束后30天内
+                <div class="bd">
+                    <div class="avatar"><img src="/fe/img/demo/avatar.png" width="74" height="74"></div>
+                    <div class="content">
+                        <div id="js-principal" class="nick">无</div>
+                        <div class="sub">项目负责人</div>
                     </div>
                 </div>
             </div>
+            <div class="mod detail">
+                <div class="bd">
+                    <i class="ico-book"></i>
+                    <div class="content">
+                        <div class="title">项目白皮书</div>
+                        <a id='js-wp' href="javascript:" class="btn" target="_blank">点击查看详情</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mod bottom">
+                <div class="hd">
+                        <span id="js-bottom-currency-amount" class="title">
+                            <span class="primary">币种/</span>金额
+                        </span>
+                    <span class="joined">已参与<span id="js-bottom-number" class="primary-color"></span>人</span>
+                </div>
+                <div class="bd">
+                    不限投资人数<br>
+                    回报时间：预计项目ICO成功结束后30天内
+                </div>
+                <!--<div class="control">-->
+                <!--<div class="btn">立即支持</div>-->
+                <!--</div>-->
+            </div>
         </div>
     </div>
+</div>
+<div class="Frame bottom">
+    <div class="View container">
+        <div class="menus">
+            <ul>
+                <li><i class="ico arrow"></i><a href="/">首页</a></li>
+                <li><i class="ico arrow"></i><a href="/manage/index.html#/projects">项目信息</a></li>
 
-#include("./layout/footer.html")
-<script src="js/popup.js"></script>
+                <li><i class="ico arrow"></i><a href="/manage/index.html#/about">关于我们</a></li>
+                <li><i class="ico arrow"></i><a href="/manage/index.html#/contact">联系我们</a></li>
+            </ul>
+        </div>
+        <div class="contact">
+            <div class="hd">联系我们</div>
+            <ul>
+                <li>
+                    <i class="ico mail"></i>
+                    官方QQ群：<br>
+                    ①661222492<br>
+                    ②661733862
+                </li>
+                <li>
+                    <i class="ico mail"></i>
+                    客服QQ：<br>
+                    ①489941545<br>
+                    ②1690176159
+                </li>
+                <li>
+                    <i class="ico location"></i>
+                    深圳市南山区大学城创客小镇
+                </li>
+            </ul>
+        </div>
+        <div class="map">
+            <div class="hd">公司地图</div>
+            <div class="inner">
+                <img src="/fe/img/demo/map.jpeg">
+            </div>
+        </div>
+        <div class="follow">
+            <div class="weibo"><wb:follow-button uid="2991975565" type="red_1" width="67" height="24"></wb:follow-button></div>
+            <div class="qrcode">
+                3ico微信关注<br><br>
+                <img src="/fe/img/qrcode.jpg"></div>
+        </div>
+    </div>
+</div>
+<div class="copyright">
+    <div class="View container">
+        CopyRight © 2017 All Rights Reserved. 版权所有 ©
+        <a href="/">www.3ico.com</a>
+    </div>
+</div>
+
+<script src="/fe/js/popup.js"></script>
 <script type="text/javascript">
-(function() {
-    var pid = location.search.split('=')[1];
-    $.ajax({
-        type: 'get',
-        url: 'http://119.23.160.90:8080/api/project_info',
-        data: {
-            pid: pid
-        },
-        headers: {
-            Authorization: localStorage.getItem('token'),
-        }
-    }).then(function (res) {
-        var project = res.project;
-        var progress = Math.round((project.complete_amount/project.target_amount)*100);
-        $('#js-number').html(project.number);
-        $('.js-target-amount').html(project.target_amount+project.currency);
-        $('#js-end-time').html(project.end_time);
-        $('#js-progress-num').html(progress + '%');
-        $('#js-progress-bar').css({
-            width: progress + '%'
-        });
-        if (new Date(project.begin_time).getTime() < new Date().getTime()) {
-            $('#js-info').show();
-        }
-    });
-    $('#js-pay').on('click', function (e) {
-        var price = $('#js-pay-input').val();
-        if (!price) return;
+    function xround(x, num) {
+        Math.round(x * Math.pow(10, num)) / Math.pow(10, num);
+    }
+
+    (function () {
+        //var pid = location.search.split('=')[1];
+        var pid =${PROJECT_ID};
         $.ajax({
-            type: 'post',
-            url: 'http://119.23.160.90:8080/api/user/invest/do',
+            type: 'get',
+            url: document.location.protocol + '//' + window.location.host + '/api/project_info',
             data: {
-                pid: pid,
-                amount: price,
+                pid: pid
             },
             headers: {
                 Authorization: localStorage.getItem('token'),
             }
         }).then(function (res) {
+            var project = res.project;
+//        var progress = Math.round((project.complete_amount/project.target_amount)*100);
+            if (project.status == 2) {
+                var progress = '100.0';
+            } else {
+                var progress = project.complete_amount / project.target_amount * 100;
+                progress = progress.toFixed(1);
+            }
 
-            var popup = new Popup();
-            popup.innerHTML =
-             '<div class="ui-dialog">支持成功，感谢您的支持！</div>';
-            popup.show();
+            $('#js-title').html(project.name);
 
-            setTimeout(function() {
-                popup.close().remove();
-                location.reload();
-            }, 2000);
+            if (project.principal != '') {
+                $('#js-principal').html(project.principal);
+            }
 
-        }).fail(function (res) {
-            var popup = new Popup();
-            popup.innerHTML =
-             '<div class="ui-dialog">'+res.responseJSON.error_msg+'</div>';
-            popup.show();
+            $('#js-pay-input').attr('placeholder', '输入支持数量 ' + project.currency);
+            $('#js-number').html(project.number);
+            $('#js-target-amount').html(project.target_amount + project.currency);
+            $('#js-user-balance').html((typeof(project.user_balance) == "undefined" ? 0 : project.user_balance) + project.currency);
+            $('#js-bottom-currency-amount').html('<span class="primary">' + project.currency + '/</span>' + project.target_amount + '</span>');
+            $('#js-bottom-number').html(project.number);
+            $('#js-end-time').html(project.end_time);
+            $('#js-progress-num').html(progress + '%');
+            $("#js-wp").attr("href", project.wp);
+            $('#js-progress-bar').css({
+                width: progress + '%'
+            });
 
-            setTimeout(function() {
-                popup.close().remove();
-            }, 2000);
+            if (new Date(project.begin_time).getTime() < new Date().getTime()) {
+                $('#js-info').show();
+            }
         });
-    });
-})()
+        $('#js-pay').on('click', function (e) {
+            var price = $('#js-pay-input').val();
+            if (!price) return;
+            $.ajax({
+                type: 'post',
+                url: document.location.protocol + '//' + window.location.host + '/api/user/invest/do',
+                data: {
+                    pid: pid,
+                    amount: price,
+                },
+                headers: {
+                    Authorization: localStorage.getItem('token'),
+                }
+            }).then(function (res) {
+                var popup = new Popup();
+                popup.innerHTML =
+                    '<div class="ui-dialog">支持成功，感谢您的支持！</div>';
+                popup.show();
+
+                setTimeout(function () {
+                    popup.close().remove();
+                    location.reload();
+                }, 2000);
+            }).fail(function (res) {
+                var popup = new Popup();
+                popup.innerHTML =
+                    '<div class="ui-dialog">' + res.responseJSON.error_msg + '</div>';
+                popup.show();
+
+                setTimeout(function () {
+                    popup.close().remove();
+                }, 2000);
+            });
+        });
+    })()
 </script>
+<script type="text/javascript" src="/fe/js/manifest.js"></script>
+<script type="text/javascript" src="/fe/js/vendor.js"></script>
+<script type="text/javascript" src="/fe/js/app.js"></script>
 </body>
 </html>
