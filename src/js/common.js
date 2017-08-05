@@ -17,7 +17,7 @@
     }
     $.ajax({
         type: 'get',
-        url: 'http://119.23.160.90:8080/api/user/profile/info',
+        url: 'http://119.23.160.90:8080/api/assist/verify',
         headers: {
             Authorization: localStorage.getItem('token'),
         }
