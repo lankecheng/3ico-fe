@@ -16,7 +16,7 @@
         });
     }
     $.ajax({
-        type: 'get',
+        type: 'post',
         url: 'http://119.23.160.90:8080/api/assist/verify',
         headers: {
             Authorization: localStorage.getItem('token'),
